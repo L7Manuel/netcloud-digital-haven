@@ -6,9 +6,10 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
+  const base = isProduction ? '/netcloud-digital-haven/' : '/';
   
   return {
-    base: isProduction ? '/netcloud-digital-haven/' : '/',
+    base,
     server: {
       host: "::",
       port: 8080,
@@ -25,6 +26,7 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
+      emptyOutDir: true,
       rollupOptions: {
         output: {
           assetFileNames: 'assets/[name]-[hash][extname]',

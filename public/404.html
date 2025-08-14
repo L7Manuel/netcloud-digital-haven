@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Obtener el path actual
-      const path = window.location.pathname;
-      // Redirigir a la aplicación con el hash router
-      window.location.href = 
-        window.location.origin + 
-        '/netcloud-digital-haven' + 
-        (path === '/' ? '' : path) + 
+      const basePath = '/netcloud-digital-haven';
+      window.location.href = basePath + 
+        window.location.pathname.replace(basePath, '') + 
         window.location.search + 
         window.location.hash;
     </script>
   </head>
   <body>
+    <p>Redirigiendo a la aplicación...</p>
+    <p>Si no eres redirigido automáticamente, <a href="/netcloud-digital-haven/">haz clic aquí</a>.</p>
+  </body>
+</html>
     <p>Redirigiendo...</p>
   </body>
 </html>
