@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   return (
@@ -7,12 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-tech-gradient rounded-lg shadow-glow-primary"></div>
-              <h3 className="text-2xl font-bold bg-tech-gradient bg-clip-text text-transparent">
-                NETCLOUD
-              </h3>
-            </div>
+            <Logo className="mb-6" />
             <p className="text-muted-foreground leading-relaxed">
               Transformamos tu negocio con tecnología de vanguardia y soluciones innovadoras.
             </p>
