@@ -36,8 +36,8 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-          Transformamos tu negocio con soluciones tecnológicas innovadoras. 
-          Cloud computing, redes inteligentes y desarrollo de software de vanguardia.
+          Usamos la innovación tecnológica y estrategias de marketing de crecimiento para generar 
+          un impacto positivo en las personas, guiados por principios cristianos de integridad, servicio y excelencia.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

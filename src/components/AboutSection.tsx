@@ -19,28 +19,61 @@ const AboutSection = () => {
                 Sobre NETCLOUD
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Somos una empresa líder en soluciones tecnológicas con más de 15 años 
-              de experiencia transformando negocios a través de la innovación digital.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Nuestro equipo de expertos se especializa en cloud computing, desarrollo 
-              de software, ciberseguridad e inteligencia artificial, ayudando a empresas 
-              de todos los tamaños a alcanzar sus objetivos tecnológicos.
-            </p>
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-primary mb-4">Nuestra Misión</h3>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Usar la innovación tecnológica y estrategias de marketing de crecimiento para generar 
+                un impacto positivo en las personas, guiados por principios cristianos de integridad, 
+                servicio y excelencia.
+              </p>
+            </div>
             
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-foreground">Certificaciones internacionales</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                <span className="text-foreground">Soporte 24/7 multiidioma</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span className="text-foreground">Metodologías ágiles y DevOps</span>
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-secondary mb-4">Nuestra Visión</h3>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Ser una empresa referente en tecnología y marketing ético, reconocida por transformar 
+                negocios y comunidades con soluciones creativas, responsables y de alta calidad.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold text-accent mb-4">Nuestros Valores</h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Integridad</span>
+                    <span className="text-muted-foreground"> — actuar con honestidad en todas las transacciones</span>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Servicio</span>
+                    <span className="text-muted-foreground"> — priorizar las necesidades de clientes, socios y equipo</span>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Excelencia</span>
+                    <span className="text-muted-foreground"> — hacer el trabajo con dedicación y calidad</span>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Respeto</span>
+                    <span className="text-muted-foreground"> — valorar la dignidad y diversidad de cada persona</span>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Colaboración</span>
+                    <span className="text-muted-foreground"> — fomentar el trabajo en equipo y el apoyo mutuo</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
