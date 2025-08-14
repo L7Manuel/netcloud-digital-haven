@@ -1,6 +1,6 @@
 # NetCloud - Digital Haven
 
-Bienvenido a NetCloud, tu solución de almacenamiento en la nube moderna y segura.
+Bienvenido a NetCloud, tu solución de marketing y automatizaciones
 
 ## 🚀 Características
 
