@@ -8,7 +8,7 @@ const Logo = ({ className }: LogoProps) => {
   return (
     <div className={cn("flex items-center", className)}>
       <img 
-        src="/lovable-uploads/1469d588-ea6a-40c4-b2f2-70ec9308b154.png" 
+        src="/lovable-uploads/8a2ff37f-d78a-4e97-8cb6-d502ae4af3da.png" 
         alt="NETCLOUD Logo" 
         className="h-10 w-auto"
       />
