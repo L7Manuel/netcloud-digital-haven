@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+# NetCloud - Digital Haven
 
-## Project info
+Bienvenido a NetCloud, tu solución de almacenamiento en la nube moderna y segura.
 
-**URL**: https://lovable.dev/projects/a06863fa-b62b-42b3-8bec-312179e82a51
+## 🚀 Características
 
-## How can I edit this code?
+- Interfaz de usuario intuitiva y responsiva
+- Almacenamiento seguro de archivos en la nube
+- Acceso rápido y fácil a tus documentos
+- Compatible con múltiples dispositivos
+- Interfaz construida con React y TypeScript
+- Estilizado con Tailwind CSS
 
-There are several ways of editing your application.
+## 🛠️ Tecnologías
 
-**Use Lovable**
+- ⚡ Vite - Entorno de desarrollo rápido
+- ⚛️ React 18 - Biblioteca de JavaScript para interfaces de usuario
+- 📦 TypeScript - JavaScript tipado estáticamente
+- 🎨 Tailwind CSS - Framework CSS utilitario
+- 🔄 React Query - Manejo de datos del servidor
+- 🎯 Radix UI - Componentes de interfaz de usuario accesibles
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a06863fa-b62b-42b3-8bec-312179e82a51) and start prompting.
+## 🚀 Empezando
 
-Changes made via Lovable will be committed automatically to this repo.
+### Requisitos previos
 
-**Use your preferred IDE**
+- Node.js 16 o superior
+- npm 8 o superior
+- Git
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Instalación
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/TU_USUARIO/netcloud-digital-haven.git
+   cd netcloud-digital-haven
+   ```
 
-Follow these steps:
+2. Instala las dependencias:
+   ```sh
+   npm install
+   ```
+
+## 🚦 Desarrollo
+
+Para iniciar el servidor de desarrollo:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+El servidor estará disponible en [http://localhost:5173](http://localhost:5173)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Construcción
 
-**Use GitHub Codespaces**
+Para crear una versión de producción:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```sh
+npm run build
+```
 
-## What technologies are used for this project?
+Los archivos de producción se generarán en la carpeta `dist/`.
 
-This project is built with:
+## 🌐 Despliegue en GitHub Pages
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Este proyecto está configurado para desplegarse fácilmente en GitHub Pages:
 
-## How can I deploy this project?
+1. Asegúrate de que todos tus cambios estén confirmados y enviados a GitHub
+2. Ejecuta el siguiente comando para desplegar:
+   ```sh
+   npm run deploy
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/a06863fa-b62b-42b3-8bec-312179e82a51) and click on Share -> Publish.
+Tu sitio estará disponible en:
+`https://TU_USUARIO.github.io/netcloud-digital-haven/`
 
-## Can I connect a custom domain to my Lovable project?
+## 📝 Licencia
 
-Yes, you can!
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más información.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contribuir
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir qué te gustaría cambiar.
