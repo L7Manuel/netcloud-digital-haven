@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Obtener el path actual
+      const path = window.location.pathname;
+      // Redirigir a la aplicación con el hash router
+      window.location.href = 
+        window.location.origin + 
+        '/netcloud-digital-haven' + 
+        (path === '/' ? '' : path) + 
+        window.location.search + 
+        window.location.hash;
+    </script>
+  </head>
+  <body>
+    <p>Redirigiendo...</p>
+  </body>
+</html>

@@ -8,9 +8,18 @@ const Logo = ({ className }: LogoProps) => {
   return (
     <div className={cn("flex items-center", className)}>
       <img 
-        src="/lovable-uploads/8a2ff37f-d78a-4e97-8cb6-d502ae4af3da.png" 
+        src="/netcloud-digital-haven/logo.png" 
         alt="NETCLOUD Logo" 
         className="h-10 w-auto"
+        onError={(e) => {
+          // Si la imagen no se carga, mostrar texto como respaldo
+          const target = e.target as HTMLImageElement;
+          target.style.display = 'none';
+          const textLogo = document.createElement('div');
+          textLogo.textContent = 'NETCLOUD';
+          textLogo.className = 'text-xl font-bold text-primary';
+          target.parentNode?.insertBefore(textLogo, target.nextSibling);
+        }}
       />
     </div>
   );

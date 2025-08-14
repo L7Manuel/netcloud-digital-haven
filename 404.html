@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Redirigir a la aplicación con la ruta base correcta
+      const basePath = '/netcloud-digital-haven';
+      const path = window.location.pathname;
+      
+      // Si ya está en la ruta base, recargar la página
+      if (path.startsWith(basePath)) {
+        window.location.href = window.location.href;
+      } else {
+        // Si no, redirigir a la ruta base
+        window.location.href = 
+          window.location.origin + 
+          basePath + 
+          (path === '/' ? '' : path) + 
+          window.location.search + 
+          window.location.hash;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirigiendo a la aplicación...</p>
+  </body>
+</html>
