@@ -57,15 +57,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground text-sm">info@netcloud.tech</span>
+                <span className="text-muted-foreground text-sm">[Colocar aquí el correo]</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground text-sm">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground text-sm">[Colocar aquí el número]</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground text-sm">Madrid, España</span>
+                <span className="text-muted-foreground text-sm">San Diego, Carabobo</span>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 NETCLOUD. Todos los derechos reservados.
+            © 2025 NETCLOUD. Todos los derechos reservados.
           </p>
         </div>
       </div>
