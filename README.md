@@ -1,29 +1,36 @@
 # NetCloud - Digital Haven
 
-Bienvenido a NetCloud, tu solución de marketing y automatizaciones
+Bienvenido a NetCloud, tu solución de marketing y automatizaciones. Una plataforma moderna construida con tecnologías de vanguardia para ofrecer el mejor rendimiento y experiencia de usuario.
 
-## 🚀 Características
+## 🚀 Características Principales
 
-- Interfaz de usuario intuitiva y responsiva
-- Almacenamiento seguro de archivos en la nube
-- Acceso rápido y fácil a tus documentos
-- Compatible con múltiples dispositivos
-- Interfaz construida con React y TypeScript
-- Estilizado con Tailwind CSS
-- ⚛️ React 18 - Biblioteca de JavaScript para interfaces de usuario
-- 📦 TypeScript - JavaScript tipado estáticamente
-- 🎨 Tailwind CSS - Framework CSS utilitario
-- 🔄 React Query - Manejo de datos del servidor
-- 🎯 Radix UI - Componentes de interfaz de usuario accesibles
-- 🌐 GitHub Pages - Alojamiento estático
+- ⚡️ **Rendimiento Optimizado**
+  - Carga ultrarrápida con Vite
+  - Code-splitting automático
+  - Imágenes optimizadas
+  - Tamaño de bundle reducido
 
-## 🚀 Empezando
+- 🎨 **Interfaz Moderna**
+  - Diseño responsivo que funciona en todos los dispositivos
+  - Componentes UI accesibles con Radix UI
+  - Temas claros/oscuros
+  - Animaciones fluidas
 
-### Requisitos previos
+- 🛠 **Tecnologías Clave**
+  - ⚛️ React 18 con TypeScript
+  - 🚀 Vite como bundler
+  - 🎨 Tailwind CSS para estilos
+  - 🔄 React Query para manejo de datos
+  - 🎯 Radix UI para componentes accesibles
+  - 📦 Tree-shaking para optimización de código
 
-- Node.js 16 o superior
-- npm 8 o superior
-- Git
+## 🚀 Comenzando
+
+### Requisitos del Sistema
+
+- Node.js 18 o superior
+- npm 9 o superior
+- Git 2.25 o superior
 
 ### Instalación
 
@@ -36,27 +43,78 @@ Bienvenido a NetCloud, tu solución de marketing y automatizaciones
 2. Instala las dependencias:
    ```sh
    npm install
+   # o si prefieres usar bun (más rápido)
+   bun install
+   ```
+
+3. Configura las variables de entorno:
+   Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+   ```
+   VITE_API_URL=tu_api_url
+   VITE_BASE_URL=/
    ```
 
 ## 🚦 Desarrollo
 
-Para iniciar el servidor de desarrollo local:
+### Iniciar Servidor de Desarrollo
 
 ```sh
 npm run dev
+# o con bun
+bun run dev
 ```
 
 El servidor estará disponible en [http://localhost:5173](http://localhost:5173)
 
-## 🏗️ Construcción
+### Comandos Útiles
 
-Para crear una versión de producción optimizada:
+```bash
+# Ejecutar linter
+npm run lint
+
+# Corregir problemas de formato
+npm run format
+
+# Ejecutar pruebas
+npm test
+
+# Analizar el bundle
+npm run analyze
+```
+
+## 🏗️ Construcción y Despliegue
+
+### Construir para Producción
 
 ```sh
 npm run build
+# o con bun
+bun run build
 ```
 
-Los archivos de producción se generarán en la carpeta `dist/`.
+Los archivos de producción optimizados se generarán en la carpeta `dist/`.
+
+### Optimizaciones Incluidas
+
+- **JavaScript**: Minificación y tree-shaking
+- **CSS**: Minificación y purgado de estilos no utilizados
+- **Imágenes**: Compresión automática a formatos modernos (WebP/AVIF)
+- **Code Splitting**: Carga bajo demanda de rutas y componentes
+- **Precarga de recursos**: Mejora en el rendimiento de carga
+
+### Desplegar en Producción
+
+1. **Configuración del Servidor**:
+   - Asegúrate de que tu servidor esté configurado para servir archivos estáticos
+   - Configura la compresión GZIP/Brotli
+   - Establece encabezados de caché apropiados
+
+2. **Variables de Entorno de Producción**:
+   ```
+   NODE_ENV=production
+   VITE_API_URL=tu_api_url_produccion
+   VITE_BASE_URL=/
+   ```
 
 ## 🌐 Despliegue en GitHub Pages
 
@@ -102,16 +160,61 @@ Los archivos de producción se generarán en la carpeta `dist/`.
 
 ## 📁 Estructura del Proyecto
 
-```bash
-src/
-├── components/     # Componentes reutilizables
-├── pages/         # Componentes de página
-├── App.tsx        # Componente principal de la aplicación
-└── main.tsx       # Punto de entrada de la aplicación
-public/
-├── 404.html       # Página de redirección personalizada
-└── .nojekyll      # Archivo para deshabilitar Jekyll en GitHub Pages
 ```
+src/
+├── assets/            # Recursos estáticos (imágenes, fuentes)
+├── components/        # Componentes reutilizables
+│   ├── ui/           # Componentes de UI personalizados
+│   └── ...
+├── hooks/            # Custom hooks
+├── lib/              # Utilidades y configuraciones
+├── pages/            # Componentes de página
+├── App.tsx           # Componente raíz de la aplicación
+└── main.tsx          # Punto de entrada de la aplicación
+
+public/               # Archivos estáticos servidos directamente
+├── favicon.ico
+├── robots.txt
+└── ...
+
+# Archivos de configuración
+vite.config.ts        # Configuración de Vite
+tailwind.config.ts    # Configuración de Tailwind CSS
+tsconfig.json         # Configuración de TypeScript
+```
+
+## 🛠 Optimizaciones Implementadas
+
+### Code Splitting
+- Rutas cargadas bajo demanda
+- Componentes pesados cargados dinámicamente
+- División de código por rutas y características
+
+### Optimización de Imágenes
+- Compresión automática a WebP/AVIF
+- Lazy loading nativo
+- Tamaños responsivos con srcset
+
+### Rendimiento
+- Preconexión a orígenes críticos
+- Precarga de recursos clave
+- Caché del lado del cliente
+- Compresión GZIP/Brotli
+
+## 📦 Análisis del Bundle
+
+Para analizar el tamaño del bundle y las dependencias:
+
+```bash
+# Instalar el analizador
+npm install -D rollup-plugin-visualizer
+
+# Ejecutar análisis
+npm run build
+npx vite-bundle-visualizer
+```
+
+Esto generará un informe detallado de las dependencias y su impacto en el tamaño del bundle.
 
 ## 🔄 Flujo de Trabajo de Desarrollo
 
