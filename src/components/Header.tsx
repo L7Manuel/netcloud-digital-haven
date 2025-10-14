@@ -1,28 +1,44 @@
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/Logo";
 
-const Header = () => {
+interface HeaderProps {
+  onNavigate?: (sectionId: string) => void;
+}
+
+const Header = ({ onNavigate }: HeaderProps) => {
+  const handleNavigation = (sectionId: string) => {
+    if (onNavigate) {
+      onNavigate(sectionId);
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Logo />
-          
+
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-foreground hover:text-primary transition-colors">
-              Inicio
-            </a>
-            <a href="#servicios" className="text-foreground hover:text-primary transition-colors">
+            <button
+              onClick={() => handleNavigation("servicios")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Servicios
-            </a>
-            <a href="#nosotros" className="text-foreground hover:text-primary transition-colors">
+            </button>
+            <button
+              onClick={() => handleNavigation("nosotros")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Nosotros
-            </a>
-            <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
-              Contacto
-            </a>
+            </button>
+            <button
+              onClick={() => handleNavigation("etica")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Ética
+            </button>
           </nav>
-          
+
           <Button variant="default" className="shadow-glow-primary">
             Comenzar
           </Button>
