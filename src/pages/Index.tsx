@@ -1,12 +1,23 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Cloud, Users, Shield } from "lucide-react";
 import Header from "@/components/Header";
-import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
-import EthicsSection from "@/components/EthicsSection";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import ContactForm from "@/components/ContactForm";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { 
+  ServicesSectionSkeleton, 
+  AboutSectionSkeleton, 
+  EthicsSectionSkeleton 
+} from "@/components/SkeletonLoaders";
+
+// Lazy loading de secciones para mejor rendimiento
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const EthicsSection = lazy(() => import("@/components/EthicsSection"));
 
 // Datos estáticos fuera del componente para evitar recreación
 const SECTIONS_DATA = [
@@ -41,6 +52,10 @@ const SCROLL_THRESHOLD = 400;
 const Index = () => {
   const [openModal, setOpenModal] = useState<string | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  
+  // Scroll animations para diferentes secciones
+  const heroAnimation = useScrollAnimation({ threshold: 0.2 });
+  const cardsAnimation = useScrollAnimation({ threshold: 0.1 });
 
   // Función memoizada para el evento de scroll con throttling implícito
   const handleScroll = useCallback(() => {
@@ -57,15 +72,27 @@ const Index = () => {
     setOpenModal(sectionId);
   }, []);
 
-  // Función memoizada para renderizar contenido de modales
+  // Función memoizada para renderizar contenido de modales con lazy loading
   const renderModalContent = useCallback((sectionId: string) => {
     switch (sectionId) {
       case "servicios":
-        return <ServicesSection />;
+        return (
+          <Suspense fallback={<ServicesSectionSkeleton />}>
+            <ServicesSection />
+          </Suspense>
+        );
       case "nosotros":
-        return <AboutSection />;
+        return (
+          <Suspense fallback={<AboutSectionSkeleton />}>
+            <AboutSection />
+          </Suspense>
+        );
       case "etica":
-        return <EthicsSection />;
+        return (
+          <Suspense fallback={<EthicsSectionSkeleton />}>
+            <EthicsSection />
+          </Suspense>
+        );
       default:
         return null;
     }
@@ -94,10 +121,27 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Skip to main content link para accesibilidad */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
+      >
+        Saltar al contenido principal
+      </a>
+      
       <Header onNavigate={handleModalOpen} />
 
       {/* Hero Section - Compact */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section 
+        ref={heroAnimation.ref}
+        id="main-content"
+        className={`relative min-h-[70vh] flex items-center justify-center overflow-hidden transition-all duration-1000 ${
+          heroAnimation.isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-10'
+        }`}
+        aria-label="Sección principal"
+      >
         <div className="absolute inset-0 bg-hero-gradient"></div>
 
         {/* Floating particles background */}
@@ -147,7 +191,15 @@ const Index = () => {
       </div>
 
       {/* Interactive Cards Section */}
-      <section className="py-16 px-6">
+      <section 
+        ref={cardsAnimation.ref}
+        className={`py-16 px-6 transition-all duration-1000 ${
+          cardsAnimation.isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-10'
+        }`}
+        aria-label="Secciones informativas"
+      >
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -207,8 +259,19 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
       {/* Contact Section - Always visible */}
       <Footer />
+
+      {/* Floating Action Buttons */}
+      <WhatsAppButton />
+      
+      {/* Contact Form Modal - Positioned in footer for easy access */}
+      <div className="fixed bottom-8 left-8 z-40 hidden md:block">
+        <ContactForm />
+      </div>
 
       {/* Floating Back to Top Button */}
       {showBackToTop && (

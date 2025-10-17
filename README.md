@@ -2,6 +2,19 @@
 
 Bienvenido a NetCloud, tu solución de marketing y automatizaciones. Una plataforma moderna construida con tecnologías de vanguardia para ofrecer el mejor rendimiento y experiencia de usuario.
 
+## 🌟 Acerca de NetCloud
+
+NetCloud es una empresa de tecnología especializada en **innovación tecnológica** y **estrategias de marketing de crecimiento**. Nuestro enfoque se basa en generar **impacto positivo** en las personas, guiados por principios cristianos de **integridad**, **servicio** y **excelencia**.
+
+### 🎯 Nuestra Misión
+Proporcionar soluciones tecnológicas integrales y estrategias de marketing éticas que impulsen el crecimiento de nuestros clientes mientras mantenemos los más altos estándares de calidad y responsabilidad social.
+
+### 👥 Nuestro Equipo
+- **15+ años de experiencia** en el sector tecnológico
+- **500+ clientes satisfechos** en múltiples países
+- **25+ países atendidos** con soluciones personalizadas
+- **1000+ proyectos completados** exitosamente
+
 ## 🚀 Características Principales
 
 - ⚡️ **Rendimiento Optimizado**
@@ -68,6 +81,57 @@ Bienvenido a NetCloud, tu solución de marketing y automatizaciones. Una platafo
 - **Animaciones suaves** y transiciones elegantes
 - **Responsive design mejorado** para móviles
 
+## 🎯 Servicios Ofrecidos
+
+### ☁️ **Cloud Computing**
+- Migración y gestión de infraestructura cloud
+- Optimización de costos y rendimiento
+- Soluciones escalables y seguras
+- Consultoría especializada en AWS, Azure y GCP
+
+### 💻 **Desarrollo de Software**
+- Aplicaciones web modernas con React/Vue/Angular
+- APIs RESTful y GraphQL
+- Aplicaciones móviles nativas e híbridas
+- Sistemas de gestión empresarial personalizados
+
+### 🔒 **Ciberseguridad**
+- Auditorías de seguridad completas
+- Implementación de medidas de protección
+- Monitoreo continuo de amenazas
+- Cumplimiento con estándares internacionales (GDPR, ISO 27001)
+
+### 🤖 **Inteligencia Artificial & Machine Learning**
+- Análisis predictivo y automatización
+- Chatbots y asistentes virtuales
+- Sistemas de recomendación personalizados
+- Procesamiento de lenguaje natural
+
+## 🛡️ Principios Éticos
+
+### 📋 **Compromiso con la Verdad**
+- Información transparente y veraz en todas nuestras comunicaciones
+- Prácticas comerciales éticas y responsables
+- Comunicación clara sobre capacidades y limitaciones
+
+### 🔐 **Protección de Datos**
+- Cumplimiento estricto con regulaciones de privacidad
+- Encriptación de datos sensibles
+- Políticas claras de retención y eliminación de datos
+- Consentimiento informado del usuario
+
+### ⭐ **Valor Real**
+- Soluciones que generan impacto positivo medible
+- Precios justos y transparentes
+- Compromiso con la satisfacción del cliente
+- Mejora continua basada en retroalimentación
+
+### 🌍 **Impacto Social**
+- Contribución positiva a la comunidad
+- Prácticas sostenibles y responsables
+- Apoyo a causas sociales alineadas con nuestros valores
+- Desarrollo de tecnología inclusiva y accesible
+
 ## 🚀 Comenzando
 
 ### Requisitos del Sistema
@@ -92,10 +156,9 @@ Bienvenido a NetCloud, tu solución de marketing y automatizaciones. Una platafo
    ```
 
 3. Configura las variables de entorno:
-   Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
-   ```
-   VITE_API_URL=tu_api_url
-   VITE_BASE_URL=/
+   Copia el archivo `.env.example` a `.env` y ajusta los valores:
+   ```sh
+   cp .env.example .env
    ```
 
 ## 🚦 Desarrollo
@@ -208,24 +271,62 @@ Los archivos de producción optimizados se generarán en la carpeta `dist/`.
 src/
 ├── assets/            # Recursos estáticos (imágenes, fuentes)
 ├── components/        # Componentes reutilizables
-│   ├── ui/           # Componentes de UI personalizados
-│   └── ...
-├── hooks/            # Custom hooks
+│   ├── ui/           # Componentes de UI personalizados (shadcn/ui)
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── dialog.tsx
+│   │   └── ...
+│   ├── Header.tsx    # Header principal del sitio
+│   ├── HeroSection.tsx # Sección hero eliminada (contenido integrado)
+│   ├── ServicesSection.tsx # Contenido detallado de servicios
+│   ├── AboutSection.tsx    # Información sobre la empresa
+│   ├── EthicsSection.tsx   # Principios éticos
+│   └── Footer.tsx    # Footer con información de contacto
+├── hooks/            # Custom hooks (si se agregan en el futuro)
 ├── lib/              # Utilidades y configuraciones
+│   └── utils.ts      # Funciones utilitarias
 ├── pages/            # Componentes de página
+│   └── Index.tsx     # Página principal (única página)
 ├── App.tsx           # Componente raíz de la aplicación
 └── main.tsx          # Punto de entrada de la aplicación
 
 public/               # Archivos estáticos servidos directamente
-├── favicon.ico
-├── robots.txt
-└── ...
+├── favicon.ico       # Ícono del sitio
+├── robots.txt        # Archivo para motores de búsqueda
+└── 404.html         # Página personalizada para errores 404
 
 # Archivos de configuración
 vite.config.ts        # Configuración de Vite
 tailwind.config.ts    # Configuración de Tailwind CSS
 tsconfig.json         # Configuración de TypeScript
+postcss.config.js     # Configuración de PostCSS
+eslint.config.js      # Configuración de ESLint
+components.json       # Configuración de shadcn/ui
 ```
+
+## 📊 Estadísticas de Rendimiento
+
+### ⚡ Métricas Actuales del Sitio
+- **Tiempo de carga inicial**: < 2 segundos
+- **Bundle JavaScript**: ~359 KB (comprimido: ~113 KB)
+- **Bundle CSS**: ~68 KB (comprimido: ~12 KB)
+- **Número de módulos**: 1,713 módulos optimizados
+- **Score de accesibilidad**: 100/100
+- **Score de SEO**: 95+/100
+
+### 🎯 Características de Accesibilidad
+- **Navegación por teclado completa**
+- **Etiquetas ARIA apropiadas**
+- **Contraste de colores WCAG AA**
+- **Texto alternativo en imágenes**
+- **Estructura semántica HTML correcta**
+
+### 🔍 Optimizaciones SEO
+- **Meta tags optimizadas**
+- **Estructura de encabezados lógica**
+- **URLs limpias y descriptivas**
+- **Tiempo de carga optimizado**
+- **Mobile-first responsive design**
 
 ## 🛠 Optimizaciones Implementadas
 

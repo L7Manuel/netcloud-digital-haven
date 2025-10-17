@@ -2,6 +2,14 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 import Logo from "@/components/Logo";
 
 const Footer = () => {
+  // Obtener variables de entorno con valores por defecto
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || "contacto@netcloud.com";
+  const contactPhone = import.meta.env.VITE_CONTACT_PHONE || "+58 412-1234567";
+  const contactAddress = import.meta.env.VITE_CONTACT_ADDRESS || "San Diego, Carabobo";
+  const linkedinUrl = import.meta.env.VITE_LINKEDIN_URL || "https://linkedin.com/company/netcloud";
+  const twitterUrl = import.meta.env.VITE_TWITTER_URL || "https://twitter.com/netcloud";
+  const githubUrl = import.meta.env.VITE_GITHUB_URL || "https://github.com/L7Manuel";
+
   return (
     <footer id="contacto" className="bg-card/50 backdrop-blur-sm border-t border-border py-16 px-6">
       <div className="container mx-auto max-w-7xl">
@@ -13,13 +21,31 @@ const Footer = () => {
               Transformamos tu negocio con tecnología de vanguardia y soluciones innovadoras.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href={linkedinUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href={twitterUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href={githubUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub"
+              >
                 <Github className="w-5 h-5" />
               </a>
             </div>
@@ -53,15 +79,19 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground text-sm">[Colocar aquí el correo]</span>
+                <a href={`mailto:${contactEmail}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  {contactEmail}
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground text-sm">[Colocar aquí el número]</span>
+                <a href={`tel:${contactPhone.replace(/\s/g, '')}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  {contactPhone}
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground text-sm">San Diego, Carabobo</span>
+                <span className="text-muted-foreground text-sm">{contactAddress}</span>
               </div>
             </div>
           </div>
