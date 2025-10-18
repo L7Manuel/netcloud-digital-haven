@@ -27,16 +27,15 @@ export default defineConfig(({ mode }) => {
       outDir: 'dist',
       assetsDir: 'assets',
       emptyOutDir: true,
+      sourcemap: false,
       rollupOptions: {
         output: {
+          manualChunks: undefined,
           assetFileNames: 'assets/[name]-[hash][extname]',
           chunkFileNames: 'assets/[name]-[hash].js',
           entryFileNames: 'assets/[name]-[hash].js',
         },
       },
-    },
-    define: {
-      'import.meta.env.BASE_URL': JSON.stringify(isProduction ? '/netcloud-digital-haven/' : '/'),
     },
   };
 });

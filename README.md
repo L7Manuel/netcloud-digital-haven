@@ -235,35 +235,144 @@ Los archivos de producción optimizados se generarán en la carpeta `dist/`.
 
 ### Proceso de Despliegue
 
-1. Asegúrate de que todos tus cambios estén confirmados y enviados a GitHub:
+1. **Limpia el build anterior** (opcional pero recomendado):
    ```sh
-   git add .
-   git commit -m "Tu mensaje descriptivo"
-   git push origin main
+   # Windows
+   rmdir /s /q dist
+   
+   # Linux/Mac
+   rm -rf dist
    ```
 
-2. Ejecuta el comando de despliegue:
+2. **Construye para producción**:
+   ```sh
+   npm run build
+   ```
+
+3. **Verifica localmente** (opcional):
+   ```sh
+   npm run preview
+   ```
+   Abre `http://localhost:4173/netcloud-digital-haven/` para verificar
+
+4. **Despliega a GitHub Pages**:
    ```sh
    npm run deploy
    ```
    Este comando:
    - Construirá la aplicación para producción
-   - Copiará los archivos necesarios
+   - Copiará el archivo `404.html` a `dist/`
    - Desplegará los archivos en la rama `gh-pages`
 
-3. Tu sitio estará disponible en:
+5. **Espera 1-2 minutos** para que GitHub procese los cambios
+
+6. Tu sitio estará disponible en:
    [https://l7manuel.github.io/netcloud-digital-haven/](https://l7manuel.github.io/netcloud-digital-haven/)
 
-### Solución de Problemas Comunes
+### ✅ Verificación Post-Despliegue
 
-- **Página en blanco**:
-  - Verifica que la ruta base en `vite.config.ts` sea correcta
-  - Asegúrate de que los archivos se hayan desplegado correctamente en la rama `gh-pages`
-  - Limpia la caché del navegador con `Ctrl + F5`
+- [ ] La página principal carga correctamente
+- [ ] Todos los estilos se aplican
+- [ ] La navegación funciona
+- [ ] Los modales se abren
+- [ ] No hay errores en la consola del navegador (F12)
+- [ ] El sitio es responsive en móvil
 
-- **Errores de ruta 404**:
-  - Asegúrate de que el archivo `404.html` esté presente en la raíz del proyecto y en la carpeta `public/`
-  - Verifica que las rutas en `App.tsx` estén configuradas correctamente
+### 🔧 Solución de Problemas Comunes
+
+#### Problema 1: Página en Blanco
+
+**Síntomas:** La página carga pero no muestra contenido, o muestra solo fondo.
+
+**Soluciones:**
+
+1. **Limpia la caché del navegador:**
+   - Presiona `Ctrl + Shift + Delete` (Windows/Linux) o `Cmd + Shift + Delete` (Mac)
+   - O usa modo incógnito/privado
+   - O presiona `Ctrl + F5` para forzar recarga
+
+2. **Verifica la configuración en GitHub:**
+   - Ve a Settings → Pages
+   - Asegúrate de que esté usando la rama `gh-pages`
+   - Verifica que el estado sea "Your site is live at..."
+
+3. **Reconstruye y redespliega:**
+   ```sh
+   rm -rf dist
+   npm run build
+   npm run deploy
+   ```
+
+4. **Verifica en DevTools (F12):**
+   - Abre la consola del navegador
+   - Busca errores 404 en archivos JS/CSS
+   - Si ves errores de rutas, verifica `vite.config.ts`
+
+#### Problema 2: Errores 404 en Assets
+
+**Síntomas:** Errores en consola como "Failed to load resource: 404"
+
+**Solución:**
+- Verifica que `vite.config.ts` tenga:
+  ```typescript
+  base: isProduction ? '/netcloud-digital-haven/' : '/'
+  ```
+- Asegúrate de que `index.html` use rutas relativas:
+  ```html
+  <link rel="icon" href="./favicon.svg" />
+  <script src="./src/main.tsx"></script>
+  ```
+
+#### Problema 3: Cambios No Se Reflejan
+
+**Síntomas:** Desplegaste pero ves la versión anterior
+
+**Soluciones:**
+1. Limpia la caché del navegador (`Ctrl + F5`)
+2. Espera 2-5 minutos (GitHub Pages tarda en actualizar)
+3. Verifica que el deploy fue exitoso en la rama `gh-pages`
+4. Usa modo incógnito para verificar
+
+#### Problema 4: Rutas No Funcionan
+
+**Síntomas:** Al recargar una página o acceder directamente, error 404
+
+**Solución:**
+- Verifica que `public/404.html` exista y esté correctamente configurado
+- Asegúrate de que `App.tsx` use:
+  ```typescript
+  <BrowserRouter basename={import.meta.env.BASE_URL}>
+  ```
+
+### 🧪 Testing Local con Configuración de Producción
+
+Para probar localmente con la misma configuración que GitHub Pages:
+
+```sh
+# Build de producción
+npm run build
+
+# Preview (simula GitHub Pages)
+npm run preview
+```
+
+Abre: `http://localhost:4173/netcloud-digital-haven/`
+
+**Nota:** La URL incluye `/netcloud-digital-haven/` igual que en GitHub Pages.
+
+### 📋 Checklist de Despliegue
+
+Antes de cada deploy:
+
+- [ ] Código sin errores: `npm run lint`
+- [ ] TypeScript sin errores: `npx tsc --noEmit`
+- [ ] Build exitoso: `npm run build`
+- [ ] Preview funciona: `npm run preview`
+- [ ] Cambios commiteados: `git status`
+- [ ] Deploy: `npm run deploy`
+- [ ] Esperar 2-3 minutos
+- [ ] Verificar en navegador (modo incógnito)
+- [ ] Probar en móvil
 
 ## 📁 Estructura del Proyecto
 

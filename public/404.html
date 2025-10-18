@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETCLOUD - Redirigiendo...</title>
     <script>
-      const basePath = '/netcloud-digital-haven';
-      window.location.href = basePath + 
-        window.location.pathname.replace(basePath, '') + 
-        window.location.search + 
-        window.location.hash;
+      // Redirección para GitHub Pages SPA
+      (function() {
+        const basePath = '/netcloud-digital-haven';
+        const path = window.location.pathname;
+        
+        // Si ya estamos en la ruta base, no hacer nada
+        if (path === basePath || path === basePath + '/') {
+          window.location.replace(basePath + '/');
+        } else {
+          // Redirigir a la ruta base con el hash
+          const redirect = basePath + '/' + 
+            window.location.search + 
+            window.location.hash;
+          window.location.replace(redirect);
+        }
+      })();
     </script>
   </head>
   <body>
-    <p>Redirigiendo a la aplicación...</p>
-    <p>Si no eres redirigido automáticamente, <a href="/netcloud-digital-haven/">haz clic aquí</a>.</p>
-  </body>
-</html>
-    <p>Redirigiendo...</p>
+    <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 100px auto; padding: 20px; text-align: center;">
+      <h1 style="color: #3b82f6;">NETCLOUD</h1>
+      <p>Redirigiendo a la aplicación...</p>
+      <p style="margin-top: 20px;">
+        Si no eres redirigido automáticamente, 
+        <a href="/netcloud-digital-haven/" style="color: #3b82f6; text-decoration: none; font-weight: 600;">haz clic aquí</a>.
+      </p>
+    </div>
   </body>
 </html>
