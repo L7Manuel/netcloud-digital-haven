@@ -25,16 +25,16 @@ const SECTIONS_DATA = [
     id: "servicios",
     title: "Nuestros Servicios",
     icon: Cloud,
-    description: "Soluciones tecnológicas integrales",
-    details: ["Cloud Computing", "Desarrollo Software", "Ciberseguridad", "IA & Machine Learning"],
+    description: "Soluciones completas para tu presencia digital",
+    details: ["Sitios Web", "E-commerce", "Chatbots IA", "Automatización", "Marketing Digital"],
     color: "bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700"
   },
   {
     id: "nosotros",
     title: "Sobre Nosotros",
     icon: Users,
-    description: "Conoce nuestra historia y valores",
-    details: ["15+ años experiencia", "500+ clientes satisfechos", "25+ países atendidos", "1000+ proyectos completados"],
+    description: "Conoce nuestro equipo y valores",
+    details: ["Desarrollo Web + IA", "Equipo especializado", "Misión y Visión", "Trabajo colaborativo"],
     color: "bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 hover:from-purple-500 hover:via-purple-600 hover:to-purple-700"
   },
   {
@@ -157,24 +157,24 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tight">
             <span className="bg-tech-gradient bg-clip-text text-transparent drop-shadow-lg">
-              NETCLOUD
+              Desarrollo web + Automatizaciones IA
             </span>
             <br />
-            <span className="text-foreground text-3xl md:text-5xl lg:text-6xl font-light">
-              Tecnología del Futuro
+            <span className="text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light">
+              que impulsan tu negocio
             </span>
           </h1>
 
           <div className="max-w-4xl mx-auto">
-            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground/90 mb-8 leading-relaxed font-light">
-              Innovación tecnológica y estrategias de marketing de crecimiento para generar
-              <span className="text-primary font-medium"> impacto positivo</span> en las personas,
-              guiados por principios cristianos de
-              <span className="text-secondary font-medium"> integridad</span>,
-              <span className="text-accent font-medium"> servicio</span> y
-              <span className="text-primary font-medium"> excelencia</span>.
+            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-muted-foreground/90 mb-8 leading-relaxed">
+              Creamos <span className="text-primary font-medium">sitios web profesionales</span>, 
+              <span className="text-secondary font-medium"> e-commerce completos</span> y 
+              <span className="text-accent font-medium"> chatbots con IA</span> que automatizan tu negocio. 
+              Trabajamos contigo de principio a fin, con 
+              <span className="text-primary font-medium"> comunicación clara</span> y 
+              <span className="text-secondary font-medium"> entregas rápidas</span>.
             </p>
           </div>
         </div>
@@ -204,11 +204,11 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="bg-tech-gradient bg-clip-text text-transparent">
-                Explora Nuestro Mundo
+                ¿Qué podemos hacer por ti?
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Haz clic en cada tarjeta para descubrir más sobre nuestros servicios, valores y compromiso ético.
+              Descubre nuestros servicios, conoce nuestro equipo y nuestro compromiso ético con cada proyecto.
             </p>
           </div>
 

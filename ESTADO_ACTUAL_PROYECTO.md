@@ -301,7 +301,7 @@ VITE_CONTACT_ADDRESS=San Diego, Carabobo, Venezuela
 
 ### Contexto del Proyecto
 
-Hola, soy Cascade continuando el trabajo en **NetCloud Digital Haven**. Este es un sitio web corporativo para una empresa de tecnología especializada en cloud computing, desarrollo de software, ciberseguridad e IA.
+Hola, soy Cascade continuando el trabajo en **NetCloud Digital Haven**. Este es un sitio web corporativo para una empresa de tecnología especializada en desarrollo de sitios web corporativos, aplicaciones web, e-commerce, chatbots con IA, automatización, marketing digital y optimización.
 
 ### Estado Actual
 

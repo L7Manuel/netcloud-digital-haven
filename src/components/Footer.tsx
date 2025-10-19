@@ -55,10 +55,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-foreground">Servicios</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Cloud Computing</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Desarrollo Software</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Ciberseguridad</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">IA & Machine Learning</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Sitios Web Corporativos</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Aplicaciones Web</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">E-commerce</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Chatbots con IA</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Marketing Digital</a></li>
             </ul>
           </div>
 

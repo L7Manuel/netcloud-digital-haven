@@ -1,41 +1,46 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Cloud, Network, Code, Shield, Database, Cpu, Search } from "lucide-react";
+import { Globe, Smartphone, ShoppingCart, Bot, Zap, TrendingUp, Settings, Search } from "lucide-react";
 
 const ServicesSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
   
   const services = [
     {
-      icon: Cloud,
-      title: "Cloud Computing",
-      description: "Migración y gestión de infraestructura en la nube con AWS, Azure y Google Cloud."
+      icon: Globe,
+      title: "Sitios Web Corporativos",
+      description: "Landing pages y sitios institucionales que convierten visitantes en clientes."
     },
     {
-      icon: Network,
-      title: "Redes Inteligentes",
-      description: "Diseño e implementación de redes corporativas seguras y escalables."
+      icon: Smartphone,
+      title: "Aplicaciones Web",
+      description: "Plataformas web complejas con interfaces intuitivas y rendimiento óptimo."
     },
     {
-      icon: Code,
-      title: "Desarrollo de Software",
-      description: "Aplicaciones web y móviles personalizadas con tecnologías de vanguardia."
+      icon: ShoppingCart,
+      title: "E-commerce",
+      description: "Tiendas online completas con pasarelas de pago y gestión de inventario."
     },
     {
-      icon: Shield,
-      title: "Ciberseguridad",
-      description: "Protección integral de datos y sistemas contra amenazas digitales."
+      icon: Bot,
+      title: "Chatbots con IA",
+      description: "Asistentes virtuales inteligentes que mejoran la atención al cliente 24/7."
     },
     {
-      icon: Database,
-      title: "Big Data & Analytics",
-      description: "Análisis inteligente de datos para toma de decisiones estratégicas."
+      icon: Zap,
+      title: "Automatización",
+      description: "Sistemas que automatizan procesos repetitivos y ahorran tiempo valioso."
     },
     {
-      icon: Cpu,
-      title: "IA & Machine Learning",
-      description: "Soluciones de inteligencia artificial para automatización y predicción."
+      icon: TrendingUp,
+      title: "Marketing Digital",
+      description: "Estrategias de marketing digital para aumentar tu presencia online y ventas."
+    },
+    {
+      icon: Settings,
+      title: "Optimización",
+      description: "Mejoramos el rendimiento y SEO de tu sitio web existente."
     }
   ];
 
@@ -44,13 +49,14 @@ const ServicesSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Soluciones completas para tu{" "}
             <span className="bg-tech-gradient bg-clip-text text-transparent">
-              Nuestros Servicios
+              presencia digital
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Ofrecemos soluciones tecnológicas integrales para empresas que buscan 
-            innovar y crecer en la era digital.
+            Desde sitios web corporativos hasta aplicaciones con inteligencia artificial, tenemos 
+            la solución perfecta para tu negocio.
           </p>
           
           {/* Search Bar */}
