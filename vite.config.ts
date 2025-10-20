@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -17,6 +18,68 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       mode === 'development' && componentTagger(),
+      VitePWA({
+        registerType: 'autoUpdate',
+        includeAssets: ['favicon.svg', 'placeholder.svg'],
+        manifest: {
+          name: 'NETCLOUD - Tecnología del Futuro',
+          short_name: 'NETCLOUD',
+          description: 'Soluciones tecnológicas innovadoras. Cloud computing, desarrollo software, ciberseguridad e IA.',
+          theme_color: '#3b82f6',
+          background_color: '#0f172a',
+          display: 'standalone',
+          scope: base,
+          start_url: base,
+          icons: [
+            {
+              src: 'favicon.svg',
+              sizes: 'any',
+              type: 'image/svg+xml',
+              purpose: 'any maskable',
+            },
+          ],
+        },
+        workbox: {
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,jpg}'],
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/api\.dicebear\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'dicebear-avatars',
+                expiration: {
+                  maxEntries: 50,
+                  maxAgeSeconds: 60 * 60 * 24 * 7, // 7 días
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: 'StaleWhileRevalidate',
+              options: {
+                cacheName: 'google-fonts-stylesheets',
+              },
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'google-fonts-webfonts',
+                expiration: {
+                  maxEntries: 30,
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // 1 año
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+          ],
+        },
+      }),
     ].filter(Boolean),
     resolve: {
       alias: {
