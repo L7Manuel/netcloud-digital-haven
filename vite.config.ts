@@ -29,6 +29,8 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       sourcemap: false,
       minify: 'terser',
+      cssMinify: true,
+      cssCodeSplit: true,
       terserOptions: {
         compress: {
           drop_console: true,
