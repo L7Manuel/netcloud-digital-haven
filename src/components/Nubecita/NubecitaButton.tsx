@@ -8,7 +8,7 @@ interface NubecitaButtonProps {
 
 const NubecitaButton = ({ onClick, hasNewMessage = false }: NubecitaButtonProps) => {
   return (
-    <div className="fixed bottom-8 left-8 z-40">
+    <div className="fixed bottom-24 left-8 z-40">
       <Button
         onClick={onClick}
         className="nubecita-float-button group relative h-16 w-16 rounded-full bg-gradient-to-br from-[#87CEEB] to-[#4682B4] p-0 shadow-[0_4px_20px_rgba(70,130,180,0.4)] transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-[0_6px_30px_rgba(70,130,180,0.6)]"
