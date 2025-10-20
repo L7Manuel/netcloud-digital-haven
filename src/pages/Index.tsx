@@ -1,13 +1,11 @@
-import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Cloud, Users, Shield } from "lucide-react";
+import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactForm from "@/components/ContactForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ProcessSection from "@/components/ProcessSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { 
   ServicesSectionSkeleton, 
@@ -19,34 +17,6 @@ import {
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const EthicsSection = lazy(() => import("@/components/EthicsSection"));
-
-// Datos estáticos fuera del componente para evitar recreación
-const SECTIONS_DATA = [
-  {
-    id: "servicios",
-    title: "Nuestros Servicios",
-    icon: Cloud,
-    description: "Soluciones completas para tu presencia digital",
-    details: ["Sitios Web", "E-commerce", "Chatbots IA", "Automatización", "Marketing Digital"],
-    color: "bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700"
-  },
-  {
-    id: "nosotros",
-    title: "Sobre Nosotros",
-    icon: Users,
-    description: "Conoce nuestro equipo y valores",
-    details: ["Desarrollo Web + IA", "Equipo especializado", "Misión y Visión", "Trabajo colaborativo"],
-    color: "bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 hover:from-purple-500 hover:via-purple-600 hover:to-purple-700"
-  },
-  {
-    id: "etica",
-    title: "Ética y Principios",
-    icon: Shield,
-    description: "Nuestro compromiso ético",
-    details: ["Información veraz", "Protección de datos", "Valor real", "Impacto social"],
-    color: "bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 hover:from-emerald-500 hover:via-emerald-600 hover:to-emerald-700"
-  }
-] as const;
 
 const SCROLL_THRESHOLD = 400;
 
@@ -117,9 +87,6 @@ const Index = () => {
     return () => window.removeEventListener('scroll', throttledScroll);
   }, [handleScroll]);
 
-  // Memoizar datos de secciones para evitar recreación
-  const sections = useMemo(() => SECTIONS_DATA, []);
-
   return (
     <div className="min-h-screen bg-background">
       {/* SEO Meta Tags */}
@@ -184,84 +151,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Decorative separator */}
-      <div className="relative py-8">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-4 bg-background text-muted-foreground">✦</span>
-        </div>
-      </div>
-
-      {/* Interactive Cards Section */}
-      <section 
-        ref={cardsAnimation.ref}
-        className={`py-16 px-6 transition-all duration-1000 ${
-          cardsAnimation.isVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-10'
-        }`}
-        aria-label="Secciones informativas"
-      >
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-tech-gradient bg-clip-text text-transparent">
-                ¿Qué podemos hacer por ti?
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Descubre nuestros servicios, conoce nuestro equipo y nuestro compromiso ético con cada proyecto.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sections.map((section) => (
-              <Dialog key={section.id} open={openModal === section.id} onOpenChange={(open) => setOpenModal(open ? section.id : null)}>
-                <DialogTrigger asChild>
-                  <Card className="group hover:shadow-glow-primary transition-all duration-300 hover:scale-105 cursor-pointer border-border bg-card/50 backdrop-blur-sm">
-                    <CardHeader className="text-center pb-4">
-                      <div className={`w-16 h-16 mx-auto mb-4 ${section.color} rounded-lg flex items-center justify-center shadow-lg`}>
-                        <section.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                        {section.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <p className="text-muted-foreground text-center leading-relaxed mb-4">
-                        {section.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {section.details.map((detail, index) => (
-                          <span
-                            key={`${section.id}-${index}`}
-                            className="px-2 py-1 text-xs bg-background/50 text-muted-foreground rounded-full border border-border/50"
-                          >
-                            {detail}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </DialogTrigger>
-
-                <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-                  <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold text-center">
-                      {section.title}
-                    </DialogTitle>
-                  </DialogHeader>
-                  <div className="mt-4">
-                    {renderModalContent(section.id)}
-                  </div>
-                </DialogContent>
-              </Dialog>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Process Section - How We Work */}
+      <ProcessSection />
 
       {/* Testimonials Section */}
       <TestimonialsSection />
