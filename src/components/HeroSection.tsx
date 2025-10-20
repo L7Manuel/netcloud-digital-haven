@@ -1,7 +1,22 @@
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-netcloud.jpg";
 
 const HeroSection = () => {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('servicios-section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
@@ -41,11 +56,23 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="shadow-glow-primary text-lg px-8 py-6">
+          <Button 
+            size="lg" 
+            className="shadow-glow-primary text-lg px-8 py-6 group hover:scale-105 transition-all duration-300"
+            onClick={scrollToServices}
+          >
+            <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
             Descubre Nuestros Servicios
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="text-lg px-8 py-6 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 group"
+            onClick={scrollToContact}
+          >
             Contactar Ahora
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

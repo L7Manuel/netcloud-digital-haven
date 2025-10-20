@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -10,6 +10,15 @@ interface HeaderProps {
 
 const Header = ({ onNavigate }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleNavigation = (sectionId: string) => {
     if (onNavigate) {
@@ -31,7 +40,11 @@ const Header = ({ onNavigate }: HeaderProps) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg' 
+        : 'bg-background/80 backdrop-blur-md border-b border-border/50'
+    }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Logo />
@@ -40,24 +53,27 @@ const Header = ({ onNavigate }: HeaderProps) => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => handleNavigation("servicios")}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-foreground hover:text-primary transition-all duration-200 font-medium relative group"
               aria-label="Ver servicios"
             >
               Servicios
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
               onClick={() => handleNavigation("nosotros")}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-foreground hover:text-primary transition-all duration-200 font-medium relative group"
               aria-label="Conocer sobre nosotros"
             >
               Nosotros
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
               onClick={() => handleNavigation("etica")}
-              className="text-foreground hover:text-primary transition-colors duration-200"
+              className="text-foreground hover:text-primary transition-all duration-200 font-medium relative group"
               aria-label="Ver principios éticos"
             >
               Ética
+              <span className="absolute -bottom-1 left-0 w-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </button>
           </nav>
 
@@ -66,10 +82,11 @@ const Header = ({ onNavigate }: HeaderProps) => {
             <ThemeToggle />
             <Button 
               variant="default" 
-              className="shadow-glow-primary hover:scale-105 transition-transform duration-200"
+              className="shadow-glow-primary hover:scale-105 transition-all duration-200 group"
               onClick={handleGetStarted}
               aria-label="Comenzar - Ir a contacto"
             >
+              <Sparkles className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
               Comenzar
             </Button>
           </div>

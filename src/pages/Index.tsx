@@ -281,11 +281,12 @@ const Index = () => {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-primary hover:bg-primary/80 text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+          className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center group hover:scale-110 animate-in slide-in-from-bottom-5"
           aria-label="Volver arriba"
+          title="Volver arriba"
         >
           <svg
-            className="w-6 h-6 group-hover:scale-110 transition-transform duration-200"
+            className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -293,10 +294,14 @@ const Index = () => {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={2.5}
               d="M5 10l7-7m0 0l7 7m-7-7v18"
             />
           </svg>
+          {/* Tooltip */}
+          <span className="absolute right-16 bg-card text-foreground px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg border border-border">
+            Volver arriba
+          </span>
         </button>
       )}
     </div>

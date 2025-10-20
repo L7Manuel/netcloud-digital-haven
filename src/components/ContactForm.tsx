@@ -74,9 +74,9 @@ const ContactForm = () => {
       <DialogTrigger asChild>
         <Button 
           size="lg" 
-          className="shadow-glow-primary hover:scale-105 transition-transform duration-200"
+          className="shadow-glow-primary hover:scale-105 transition-all duration-300 group"
         >
-          <Mail className="w-5 h-5 mr-2" />
+          <Mail className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
           Contáctanos
         </Button>
       </DialogTrigger>
