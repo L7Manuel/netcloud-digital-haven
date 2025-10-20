@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Cloud, Users, Shield } from "lucide-react";
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -121,6 +122,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* SEO Meta Tags */}
+      <SEO />
+      
       {/* Skip to main content link para accesibilidad */}
       <a 
         href="#main-content" 
