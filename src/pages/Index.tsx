@@ -157,24 +157,24 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
             <span className="bg-tech-gradient bg-clip-text text-transparent drop-shadow-lg">
-              Desarrollo web + Automatizaciones IA
+              NETCLOUD
             </span>
             <br />
-            <span className="text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light">
-              que impulsan tu negocio
+            <span className="text-foreground text-3xl md:text-5xl lg:text-6xl font-light">
+              Tecnología del Futuro
             </span>
           </h1>
 
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-muted-foreground/90 mb-8 leading-relaxed">
-              Creamos <span className="text-primary font-medium">sitios web profesionales</span>, 
-              <span className="text-secondary font-medium"> e-commerce completos</span> y 
-              <span className="text-accent font-medium"> chatbots con IA</span> que automatizan tu negocio. 
-              Trabajamos contigo de principio a fin, con 
-              <span className="text-primary font-medium"> comunicación clara</span> y 
-              <span className="text-secondary font-medium"> entregas rápidas</span>.
+            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground/90 mb-8 leading-relaxed font-light">
+              Innovación tecnológica y estrategias de marketing de crecimiento para generar 
+              <span className="text-primary font-medium"> impacto positivo</span> en las personas, 
+              guiados por principios cristianos de 
+              <span className="text-secondary font-medium"> integridad</span>, 
+              <span className="text-accent font-medium"> servicio</span> y 
+              <span className="text-primary font-medium"> excelencia</span>.
             </p>
           </div>
         </div>
