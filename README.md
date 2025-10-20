@@ -243,37 +243,53 @@ Los archivos de producción optimizados se generarán en la carpeta `dist/`.
 
 ## 🌐 Despliegue en GitHub Pages
 
-### Configuración Inicial
+### ⚡ Despliegue Automático (Recomendado)
 
-1. Asegúrate de que tu repositorio esté configurado correctamente en GitHub:
-   - Ve a la pestaña "Settings"
-   - Navega a "Pages" en el menú lateral
-   - Configura "Source" para usar la rama `gh-pages` y la carpeta `/(root)`
-   - Habilita "Enforce HTTPS" si está disponible
+El proyecto está configurado con **GitHub Actions** para despliegue automático. Cada vez que hagas push a la rama `main`, el sitio se desplegará automáticamente.
 
-### Proceso de Despliegue
+#### Configuración Inicial (Solo una vez)
 
-1. **Limpia el build anterior** (opcional pero recomendado):
+1. Ve a tu repositorio en GitHub
+2. Navega a **Settings** → **Pages**
+3. En **Source**, selecciona:
+   - **Source**: `GitHub Actions`
+4. Guarda los cambios
+
+#### Flujo de Trabajo Automático
+
+```sh
+# 1. Haz tus cambios en el código
+# 2. Commit y push a main
+git add .
+git commit -m "Descripción de cambios"
+git push origin main
+
+# 3. GitHub Actions desplegará automáticamente
+# 4. Espera 2-3 minutos y verifica en:
+# https://l7manuel.github.io/netcloud-digital-haven/
+```
+
+#### Verificar el Estado del Deploy
+
+- Ve a la pestaña **Actions** en tu repositorio
+- Verás el workflow "Deploy to GitHub Pages" en ejecución
+- Un ✅ verde indica despliegue exitoso
+- Un ❌ rojo indica un error (revisa los logs)
+
+### 🔧 Despliegue Manual (Alternativo)
+
+Si prefieres desplegar manualmente sin GitHub Actions:
+
+1. **Limpia el build anterior** (opcional):
    ```sh
    # Windows
-   rmdir /s /q dist
+   Remove-Item -Path dist -Recurse -Force -ErrorAction SilentlyContinue
    
    # Linux/Mac
    rm -rf dist
    ```
 
-2. **Construye para producción**:
-   ```sh
-   npm run build
-   ```
-
-3. **Verifica localmente** (opcional):
-   ```sh
-   npm run preview
-   ```
-   Abre `http://localhost:4173/netcloud-digital-haven/` para verificar
-
-4. **Despliega a GitHub Pages**:
+2. **Construye y despliega**:
    ```sh
    npm run deploy
    ```
@@ -282,9 +298,11 @@ Los archivos de producción optimizados se generarán en la carpeta `dist/`.
    - Copiará el archivo `404.html` a `dist/`
    - Desplegará los archivos en la rama `gh-pages`
 
-5. **Espera 1-2 minutos** para que GitHub procese los cambios
+3. **Configura GitHub Pages** para usar la rama `gh-pages`:
+   - Settings → Pages → Source: `Deploy from a branch`
+   - Branch: `gh-pages` / `/(root)`
 
-6. Tu sitio estará disponible en:
+4. Tu sitio estará disponible en:
    [https://l7manuel.github.io/netcloud-digital-haven/](https://l7manuel.github.io/netcloud-digital-haven/)
 
 ### ✅ Verificación Post-Despliegue
@@ -345,11 +363,20 @@ Los archivos de producción optimizados se generarán en la carpeta `dist/`.
 
 **Síntomas:** Desplegaste pero ves la versión anterior
 
+**Causa Principal:** Si usas despliegue manual (`npm run deploy`), los cambios NO se reflejarán hasta que ejecutes ese comando.
+
 **Soluciones:**
-1. Limpia la caché del navegador (`Ctrl + F5`)
-2. Espera 2-5 minutos (GitHub Pages tarda en actualizar)
-3. Verifica que el deploy fue exitoso en la rama `gh-pages`
-4. Usa modo incógnito para verificar
+1. **Usa despliegue automático con GitHub Actions** (recomendado):
+   - Configura Settings → Pages → Source: `GitHub Actions`
+   - Haz push a `main` y el despliegue será automático
+   
+2. **Si usas despliegue manual:**
+   - Ejecuta `npm run deploy` después de cada cambio
+   - Verifica en Actions que el workflow se ejecutó
+   
+3. **Limpia la caché del navegador** (`Ctrl + F5`)
+4. **Espera 2-5 minutos** (GitHub Pages tarda en actualizar)
+5. **Usa modo incógnito** para verificar sin caché
 
 #### Problema 4: Rutas No Funcionan
 
