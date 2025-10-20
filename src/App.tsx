@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import ServiciosPage from "./pages/ServiciosPage";
 import NosotrosPage from "./pages/NosotrosPage";
 import EticaPage from "./pages/EticaPage";
+import Nubecita from "@/components/Nubecita";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,6 +40,8 @@ const App = () => {
                 <Route path="/etica" element={<EticaPage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
+              {/* Nubecita - Asistente Técnico (disponible en todas las páginas) */}
+              <Nubecita />
             </BrowserRouter>
           </TooltipProvider>
         </QueryClientProvider>
