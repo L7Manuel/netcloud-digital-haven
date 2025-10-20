@@ -1,553 +1,210 @@
 # NetCloud - Digital Haven
 
-Bienvenido a NetCloud, tu solución de marketing y automatizaciones. Una plataforma moderna construida con tecnologías de vanguardia para ofrecer el mejor rendimiento y experiencia de usuario.
+> Sitio web corporativo para empresa de tecnología especializada en desarrollo web, automatizaciones IA y marketing digital.
 
-## 🌟 Acerca de NetCloud
+**🌐 Sitio en Producción:** https://l7manuel.github.io/netcloud-digital-haven/
 
-NetCloud es una empresa de tecnología especializada en **innovación tecnológica** y **estrategias de marketing de crecimiento**. Nuestro enfoque se basa en generar **impacto positivo** en las personas, guiados por principios cristianos de **integridad**, **servicio** y **excelencia**.
+---
 
-### 🎯 Nuestra Misión
-Proporcionar soluciones tecnológicas integrales y estrategias de marketing éticas que impulsen el crecimiento de nuestros clientes mientras mantenemos los más altos estándares de calidad y responsabilidad social.
+## 🚀 Inicio Rápido
 
-### 👥 Nuestro Equipo
-- **15+ años de experiencia** en el sector tecnológico
-- **500+ clientes satisfechos** en múltiples países
-- **25+ países atendidos** con soluciones personalizadas
-- **1000+ proyectos completados** exitosamente
-
-## 🚀 Características Principales
-
-- ⚡️ **Rendimiento Optimizado**
-  - Carga ultrarrápida con Vite
-  - Code-splitting automático
-  - Imágenes optimizadas
-  - Tamaño de bundle reducido
-  - **React Performance Optimizations** - useCallback, useMemo, datos memoizados
-  - **Event Handling Optimization** - Throttling con requestAnimationFrame
-  - **Memory Management** - Cleanup automático de listeners
-
-- 🎨 **Interfaz Moderna Mejorada**
-  - Diseño responsivo que funciona en todos los dispositivos
-  - Componentes UI accesibles con Radix UI
-  - Temas claros/oscuros
-  - Animaciones fluidas
-  - **Nueva fuente Inter** para mejor legibilidad
-  - **Gradientes vibrantes** con efectos hover dinámicos
-  - **Partículas flotantes** en el fondo del hero
-  - **Separadores visuales elegantes** entre secciones
-
-- 🛠 **Tecnologías Clave**
-  - ⚛️ React 18 con TypeScript
-  - 🚀 Vite como bundler
-  - 🎨 Tailwind CSS para estilos
-  - 🔄 React Query para manejo de datos
-  - 🎯 Radix UI para componentes accesibles
-  - 📦 Tree-shaking para optimización de código
-  - **Sistema de modales interactivos** para navegación intuitiva
-  - **Botón flotante "volver arriba"** para mejor UX
-
-## ✨ Mejoras Recientes Implementadas
-
-### 🎯 **Nueva Arquitectura de Navegación**
-- **Layout híbrido** - Página principal compacta + modales para contenido detallado
-- **Sistema de tarjetas interactivas** con información específica
-- **Contacto siempre visible** en la página principal
-- **Navegación integrada** entre header y tarjetas
-
-### 🎨 **Mejoras Visuales Avanzadas**
-- **Gradientes dinámicos** en tarjetas con efectos hover
-- **Partículas animadas** en el fondo del hero section
-- **Separadores elegantes** entre secciones principales
-- **Fuente Inter moderna** desde Google Fonts
-- **Sistema de colores optimizado** con modo oscuro mejorado
-
-### ⚡ **Optimizaciones de Rendimiento**
-- **React Hooks optimizados** (useCallback, useMemo, useEffect)
-- **Event listeners con cleanup automático** y throttling
-- **Datos estáticos memoizados** fuera del componente
-- **Bundle optimizado** con imports limpios
-- **Scroll performance mejorado** con requestAnimationFrame
-
-### 🔧 **Correcciones de Código**
-- **CSS completamente optimizado** - reducción de 7+ warnings a 3 inevitables
-- **Código duplicado eliminado** en todos los archivos
-- **Imports optimizados** y estructura de archivos mejorada
-- **Comentarios descriptivos** para mejor mantenibilidad
-
-### 📱 **Características UX/UI**
-- **Tarjetas más detalladas** con badges informativos
-- **Información contextual** antes de abrir modales
-- **Botón flotante inteligente** que aparece al hacer scroll
-- **Animaciones suaves** y transiciones elegantes
-- **Responsive design mejorado** para móviles
-
-## 🎯 Servicios Ofrecidos
-
-### 🌐 **Sitios Web Corporativos**
-- Landing pages profesionales y atractivas
-- Sitios institucionales que convierten visitantes en clientes
-- Diseño responsive y optimizado para SEO
-- Integración con herramientas de marketing
-
-### 📱 **Aplicaciones Web**
-- Plataformas web complejas con interfaces intuitivas
-- Aplicaciones web modernas con React y tecnologías de vanguardia
-- Rendimiento óptimo y experiencia de usuario excepcional
-- Dashboards personalizados y sistemas de gestión
-
-### 🛒 **E-commerce**
-- Tiendas online completas y funcionales
-- Pasarelas de pago seguras integradas
-- Gestión de inventario y productos
-- Sistemas de seguimiento de pedidos
-
-### 🤖 **Chatbots con IA**
-- Asistentes virtuales inteligentes
-- Atención al cliente 24/7 automatizada
-- Integración con WhatsApp, Facebook Messenger y más
-- Procesamiento de lenguaje natural
-
-### ⚡ **Automatización**
-- Sistemas que automatizan procesos repetitivos
-- Ahorro de tiempo valioso para tu equipo
-- Integración de sistemas y herramientas
-- Workflows personalizados
-
-### 📈 **Marketing Digital**
-- Estrategias de marketing digital efectivas
-- Aumento de presencia online y ventas
-- SEO y optimización de conversiones
-- Campañas publicitarias en redes sociales
-
-### ⚙️ **Optimización**
-- Mejora del rendimiento de sitios web existentes
-- Optimización SEO avanzada
-- Auditorías de rendimiento y seguridad
-- Mejora de experiencia de usuario
-
-## 🛡️ Principios Éticos
-
-### 📋 **Compromiso con la Verdad**
-- Información transparente y veraz en todas nuestras comunicaciones
-- Prácticas comerciales éticas y responsables
-- Comunicación clara sobre capacidades y limitaciones
-
-### 🔐 **Protección de Datos**
-- Cumplimiento estricto con regulaciones de privacidad
-- Encriptación de datos sensibles
-- Políticas claras de retención y eliminación de datos
-- Consentimiento informado del usuario
-
-### ⭐ **Valor Real**
-- Soluciones que generan impacto positivo medible
-- Precios justos y transparentes
-- Compromiso con la satisfacción del cliente
-- Mejora continua basada en retroalimentación
-
-### 🌍 **Impacto Social**
-- Contribución positiva a la comunidad
-- Prácticas sostenibles y responsables
-- Apoyo a causas sociales alineadas con nuestros valores
-- Desarrollo de tecnología inclusiva y accesible
-
-## 🚀 Comenzando
-
-### Requisitos del Sistema
-
-- Node.js 18 o superior
-- npm 9 o superior
-- Git 2.25 o superior
+### Requisitos
+- Node.js 18+
+- npm 9+
 
 ### Instalación
 
-1. Clona el repositorio:
-   ```sh
-   git clone https://github.com/L7Manuel/netcloud-digital-haven.git
-   cd netcloud-digital-haven
-   ```
+```bash
+# Clonar repositorio
+git clone https://github.com/L7Manuel/netcloud-digital-haven.git
+cd netcloud-digital-haven
 
-2. Instala las dependencias:
-   ```sh
-   npm install
-   # o si prefieres usar bun (más rápido)
-   bun install
-   ```
+# Instalar dependencias
+npm install
 
-3. Configura las variables de entorno:
-   Copia el archivo `.env.example` a `.env` y ajusta los valores:
-   ```sh
-   cp .env.example .env
-   ```
+# Configurar variables de entorno
+cp .env.example .env
+# Edita .env con tu información
 
-## 🚦 Desarrollo
-
-### Iniciar Servidor de Desarrollo
-
-```sh
+# Iniciar desarrollo
 npm run dev
-# o con bun
-bun run dev
 ```
 
-El servidor estará disponible en [http://localhost:5173](http://localhost:5173)
+El sitio estará disponible en http://localhost:8080
 
-### Comandos Útiles
+---
+
+## 📦 Comandos Disponibles
 
 ```bash
-# Ejecutar linter
-npm run lint
-
-# Corregir problemas de formato
-npm run format
-
-# Ejecutar pruebas
-npm test
-
-# Analizar el bundle
-npm run analyze
+npm run dev      # Servidor de desarrollo
+npm run build    # Build de producción
+npm run preview  # Preview del build
+npm run lint     # Verificar código
+npm run deploy   # Deploy a GitHub Pages (manual)
 ```
 
-## 🏗️ Construcción y Despliegue
+---
 
-### Construir para Producción
+## 🛠 Stack Tecnológico
 
-```sh
+- **React 18** + TypeScript
+- **Vite** - Build tool
+- **Tailwind CSS** - Estilos
+- **shadcn/ui** - Componentes UI
+- **React Query** - State management
+- **GitHub Pages** - Hosting
+
+---
+
+## 🎯 Características
+
+- ⚡ Carga ultrarrápida con lazy loading
+- 📱 100% responsive
+- ♿ Accesibilidad WCAG AA
+- 🔍 SEO optimizado
+- 🌓 Modo oscuro/claro
+- 🤖 Despliegue automático con GitHub Actions
+
+---
+
+## 🚀 Despliegue
+
+### Despliegue Automático (Recomendado)
+
+El proyecto usa GitHub Actions para despliegue automático:
+
+1. Haz push a la rama `main`
+2. GitHub Actions despliega automáticamente
+3. Espera 2-3 minutos
+4. Verifica en: https://l7manuel.github.io/netcloud-digital-haven/
+
+### Configuración Inicial
+
+1. Ve a **Settings → Pages** en tu repositorio
+2. En **Source**, selecciona: `GitHub Actions`
+3. En **Settings → Actions → General**, verifica:
+   - Workflow permissions: `Read and write permissions`
+
+### Despliegue Manual (Alternativo)
+
+```bash
+# Windows PowerShell
+Remove-Item -Path dist -Recurse -Force -ErrorAction SilentlyContinue
 npm run build
-# o con bun
-bun run build
+npm run deploy
 ```
 
-Los archivos de producción optimizados se generarán en la carpeta `dist/`.
-
-### Optimizaciones Incluidas
-
-- **JavaScript**: Minificación y tree-shaking
-- **CSS**: Minificación y purgado de estilos no utilizados
-- **Imágenes**: Compresión automática a formatos modernos (WebP/AVIF)
-- **Code Splitting**: Carga bajo demanda de rutas y componentes
-- **Precarga de recursos**: Mejora en el rendimiento de carga
-
-### Desplegar en Producción
-
-1. **Configuración del Servidor**:
-   - Asegúrate de que tu servidor esté configurado para servir archivos estáticos
-   - Configura la compresión GZIP/Brotli
-   - Establece encabezados de caché apropiados
-
-2. **Variables de Entorno de Producción**:
-   ```
-   NODE_ENV=production
-   VITE_API_URL=tu_api_url_produccion
-   VITE_BASE_URL=/
-   ```
-
-## 🌐 Despliegue en GitHub Pages
-
-### ⚡ Despliegue Automático (Recomendado)
-
-El proyecto está configurado con **GitHub Actions** para despliegue automático. Cada vez que hagas push a la rama `main`, el sitio se desplegará automáticamente.
-
-#### Configuración Inicial (Solo una vez)
-
-1. Ve a tu repositorio en GitHub
-2. Navega a **Settings** → **Pages**
-3. En **Source**, selecciona:
-   - **Source**: `GitHub Actions`
-4. Guarda los cambios
-
-#### Flujo de Trabajo Automático
-
-```sh
-# 1. Haz tus cambios en el código
-# 2. Commit y push a main
-git add .
-git commit -m "Descripción de cambios"
-git push origin main
-
-# 3. GitHub Actions desplegará automáticamente
-# 4. Espera 2-3 minutos y verifica en:
-# https://l7manuel.github.io/netcloud-digital-haven/
-```
-
-#### Verificar el Estado del Deploy
-
-- Ve a la pestaña **Actions** en tu repositorio
-- Verás el workflow "Deploy to GitHub Pages" en ejecución
-- Un ✅ verde indica despliegue exitoso
-- Un ❌ rojo indica un error (revisa los logs)
-
-### 🔧 Despliegue Manual (Alternativo)
-
-Si prefieres desplegar manualmente sin GitHub Actions:
-
-1. **Limpia el build anterior** (opcional):
-   ```sh
-   # Windows
-   Remove-Item -Path dist -Recurse -Force -ErrorAction SilentlyContinue
-   
-   # Linux/Mac
-   rm -rf dist
-   ```
-
-2. **Construye y despliega**:
-   ```sh
-   npm run deploy
-   ```
-   Este comando:
-   - Construirá la aplicación para producción
-   - Copiará el archivo `404.html` a `dist/`
-   - Desplegará los archivos en la rama `gh-pages`
-
-3. **Configura GitHub Pages** para usar la rama `gh-pages`:
-   - Settings → Pages → Source: `Deploy from a branch`
-   - Branch: `gh-pages` / `/(root)`
-
-4. Tu sitio estará disponible en:
-   [https://l7manuel.github.io/netcloud-digital-haven/](https://l7manuel.github.io/netcloud-digital-haven/)
-
-### ✅ Verificación Post-Despliegue
-
-- [ ] La página principal carga correctamente
-- [ ] Todos los estilos se aplican
-- [ ] La navegación funciona
-- [ ] Los modales se abren
-- [ ] No hay errores en la consola del navegador (F12)
-- [ ] El sitio es responsive en móvil
-
-### 🔧 Solución de Problemas Comunes
-
-#### Problema 1: Página en Blanco
-
-**Síntomas:** La página carga pero no muestra contenido, o muestra solo fondo.
-
-**Soluciones:**
-
-1. **Limpia la caché del navegador:**
-   - Presiona `Ctrl + Shift + Delete` (Windows/Linux) o `Cmd + Shift + Delete` (Mac)
-   - O usa modo incógnito/privado
-   - O presiona `Ctrl + F5` para forzar recarga
-
-2. **Verifica la configuración en GitHub:**
-   - Ve a Settings → Pages
-   - Asegúrate de que esté usando la rama `gh-pages`
-   - Verifica que el estado sea "Your site is live at..."
-
-3. **Reconstruye y redespliega:**
-   ```sh
-   rm -rf dist
-   npm run build
-   npm run deploy
-   ```
-
-4. **Verifica en DevTools (F12):**
-   - Abre la consola del navegador
-   - Busca errores 404 en archivos JS/CSS
-   - Si ves errores de rutas, verifica `vite.config.ts`
-
-#### Problema 2: Errores 404 en Assets
-
-**Síntomas:** Errores en consola como "Failed to load resource: 404"
-
-**Solución:**
-- Verifica que `vite.config.ts` tenga:
-  ```typescript
-  base: isProduction ? '/netcloud-digital-haven/' : '/'
-  ```
-- Asegúrate de que `index.html` use rutas relativas:
-  ```html
-  <link rel="icon" href="./favicon.svg" />
-  <script src="./src/main.tsx"></script>
-  ```
-
-#### Problema 3: Cambios No Se Reflejan
-
-**Síntomas:** Desplegaste pero ves la versión anterior
-
-**Causa Principal:** Si usas despliegue manual (`npm run deploy`), los cambios NO se reflejarán hasta que ejecutes ese comando.
-
-**Soluciones:**
-1. **Usa despliegue automático con GitHub Actions** (recomendado):
-   - Configura Settings → Pages → Source: `GitHub Actions`
-   - Haz push a `main` y el despliegue será automático
-   
-2. **Si usas despliegue manual:**
-   - Ejecuta `npm run deploy` después de cada cambio
-   - Verifica en Actions que el workflow se ejecutó
-   
-3. **Limpia la caché del navegador** (`Ctrl + F5`)
-4. **Espera 2-5 minutos** (GitHub Pages tarda en actualizar)
-5. **Usa modo incógnito** para verificar sin caché
-
-#### Problema 4: Rutas No Funcionan
-
-**Síntomas:** Al recargar una página o acceder directamente, error 404
-
-**Solución:**
-- Verifica que `public/404.html` exista y esté correctamente configurado
-- Asegúrate de que `App.tsx` use:
-  ```typescript
-  <BrowserRouter basename={import.meta.env.BASE_URL}>
-  ```
-
-### 🧪 Testing Local con Configuración de Producción
-
-Para probar localmente con la misma configuración que GitHub Pages:
-
-```sh
-# Build de producción
-npm run build
-
-# Preview (simula GitHub Pages)
-npm run preview
-```
-
-Abre: `http://localhost:4173/netcloud-digital-haven/`
-
-**Nota:** La URL incluye `/netcloud-digital-haven/` igual que en GitHub Pages.
-
-### 📋 Checklist de Despliegue
-
-Antes de cada deploy:
-
-- [ ] Código sin errores: `npm run lint`
-- [ ] TypeScript sin errores: `npx tsc --noEmit`
-- [ ] Build exitoso: `npm run build`
-- [ ] Preview funciona: `npm run preview`
-- [ ] Cambios commiteados: `git status`
-- [ ] Deploy: `npm run deploy`
-- [ ] Esperar 2-3 minutos
-- [ ] Verificar en navegador (modo incógnito)
-- [ ] Probar en móvil
+---
 
 ## 📁 Estructura del Proyecto
 
 ```
 src/
-├── assets/            # Recursos estáticos (imágenes, fuentes)
-├── components/        # Componentes reutilizables
-│   ├── ui/           # Componentes de UI personalizados (shadcn/ui)
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── dialog.tsx
-│   │   └── ...
-│   ├── Header.tsx    # Header principal del sitio
-│   ├── HeroSection.tsx # Sección hero eliminada (contenido integrado)
-│   ├── ServicesSection.tsx # Contenido detallado de servicios
-│   ├── AboutSection.tsx    # Información sobre la empresa
-│   ├── EthicsSection.tsx   # Principios éticos
-│   └── Footer.tsx    # Footer con información de contacto
-├── hooks/            # Custom hooks (si se agregan en el futuro)
-├── lib/              # Utilidades y configuraciones
-│   └── utils.ts      # Funciones utilitarias
-├── pages/            # Componentes de página
-│   └── Index.tsx     # Página principal (única página)
-├── App.tsx           # Componente raíz de la aplicación
-└── main.tsx          # Punto de entrada de la aplicación
+├── components/       # Componentes React
+│   ├── ui/          # shadcn/ui components
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   └── ...
+├── pages/           # Páginas
+│   └── Index.tsx
+├── hooks/           # Custom hooks
+├── lib/             # Utilidades
+└── App.tsx
 
-public/               # Archivos estáticos servidos directamente
-├── favicon.ico       # Ícono del sitio
-├── robots.txt        # Archivo para motores de búsqueda
-└── 404.html         # Página personalizada para errores 404
-
-# Archivos de configuración
-vite.config.ts        # Configuración de Vite
-tailwind.config.ts    # Configuración de Tailwind CSS
-tsconfig.json         # Configuración de TypeScript
-postcss.config.js     # Configuración de PostCSS
-eslint.config.js      # Configuración de ESLint
-components.json       # Configuración de shadcn/ui
+public/              # Archivos estáticos
+├── .nojekyll       # Evita Jekyll en GitHub Pages
+├── 404.html        # Redirección SPA
+└── ...
 ```
 
-## 📊 Estadísticas de Rendimiento
+---
 
-### ⚡ Métricas Actuales del Sitio
-- **Tiempo de carga inicial**: < 2 segundos
-- **Bundle JavaScript**: ~359 KB (comprimido: ~113 KB)
-- **Bundle CSS**: ~68 KB (comprimido: ~12 KB)
-- **Número de módulos**: 1,713 módulos optimizados
-- **Score de accesibilidad**: 100/100
-- **Score de SEO**: 95+/100
+## 🔧 Configuración
 
-### 🎯 Características de Accesibilidad
-- **Navegación por teclado completa**
-- **Etiquetas ARIA apropiadas**
-- **Contraste de colores WCAG AA**
-- **Texto alternativo en imágenes**
-- **Estructura semántica HTML correcta**
+### Variables de Entorno
 
-### 🔍 Optimizaciones SEO
-- **Meta tags optimizadas**
-- **Estructura de encabezados lógica**
-- **URLs limpias y descriptivas**
-- **Tiempo de carga optimizado**
-- **Mobile-first responsive design**
+Crea un archivo `.env` basado en `.env.example`:
 
-## 🛠 Optimizaciones Implementadas
+```env
+VITE_WHATSAPP_NUMBER=584121234567
+VITE_CONTACT_EMAIL=contacto@netcloud.com
+VITE_CONTACT_PHONE=+58 412-1234567
+VITE_CONTACT_ADDRESS=San Diego, Carabobo, Venezuela
+```
 
-### Code Splitting
-- Rutas cargadas bajo demanda
-- Componentes pesados cargados dinámicamente
-- División de código por rutas y características
+---
 
-### Optimización de Imágenes
-- Compresión automática a WebP/AVIF
-- Lazy loading nativo
-- Tamaños responsivos con srcset
+## 🐛 Troubleshooting
 
-### Rendimiento
-- Preconexión a orígenes críticos
-- Precarga de recursos clave
-- Caché del lado del cliente
-- Compresión GZIP/Brotli
-- **React Performance Optimizations** con hooks avanzados
+### Página en Blanco en GitHub Pages
 
-## 📦 Análisis del Bundle
+1. Limpia caché del navegador (`Ctrl + F5`)
+2. Espera 2-3 minutos después del deploy
+3. Verifica en modo incógnito
+4. Revisa Console (F12) para errores
 
-Para analizar el tamaño del bundle y las dependencias:
+### Cambios No Se Reflejan
+
+**Con GitHub Actions:**
+- Solo haz push a `main` y espera 2-3 minutos
+
+**Con deploy manual:**
+```bash
+Remove-Item -Path dist -Recurse -Force
+npm run build
+npm run deploy
+```
+
+### Errores de Build
 
 ```bash
-# Instalar el analizador
-npm install -D rollup-plugin-visualizer
+# Reinstalar dependencias
+Remove-Item -Path node_modules -Recurse -Force
+npm install
 
-# Ejecutar análisis
-npm run build
-npx vite-bundle-visualizer
+# Verificar TypeScript
+npx tsc --noEmit
 ```
 
-Esto generará un informe detallado de las dependencias y su impacto en el tamaño del bundle.
+---
 
-## 🔄 Flujo de Trabajo de Desarrollo
+## 📚 Documentación
 
-1. Crea una nueva rama para tus cambios:
-   ```sh
-   git checkout -b nombre-de-tu-rama
-   ```
+- **README.md** - Este archivo (inicio rápido)
+- **PROYECTO.md** - Documentación técnica completa
 
-2. Realiza tus cambios y verifica que todo funcione localmente
+Para información detallada sobre:
+- Optimizaciones implementadas
+- Próximas mejoras sugeridas
+- Troubleshooting avanzado
+- Métricas de performance
 
-3. Haz commit de tus cambios:
-   ```sh
-   git add .
-   git commit -m "Descripción de los cambios"
-   ```
+Consulta **PROYECTO.md**
 
-4. Sube tus cambios y crea un Pull Request
-
-## 📝 Licencia
-
-Este proyecto está bajo la [Licencia MIT](LICENSE).
+---
 
 ## 🤝 Contribuir
 
-Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+1. Fork el proyecto
+2. Crea una rama (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-1. Abre un issue para discutir los cambios propuestos
-2. Haz fork del proyecto
-3. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
-4. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
-5. Haz push a la rama (`git push origin feature/AmazingFeature`)
-6. Abre un Pull Request
+---
 
-## 📞 Soporte
+## 📄 Licencia
 
-Para soporte, por favor abre un issue en el repositorio.
+Este proyecto está bajo la Licencia MIT.
+
+---
+
+## 📞 Contacto
+
+- **GitHub:** [@L7Manuel](https://github.com/L7Manuel)
+- **Sitio:** https://l7manuel.github.io/netcloud-digital-haven/
+
+---
+
+**Hecho con ❤️ por el equipo de NetCloud**
