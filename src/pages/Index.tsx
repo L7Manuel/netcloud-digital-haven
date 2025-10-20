@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, lazy, Suspense } from "react";
+import { useState, useEffect, useCallback } from "react";
 import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,26 +7,14 @@ import ContactForm from "@/components/ContactForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ProcessSection from "@/components/ProcessSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { 
-  ServicesSectionSkeleton, 
-  AboutSectionSkeleton, 
-  EthicsSectionSkeleton 
-} from "@/components/SkeletonLoaders";
-
-// Lazy loading de secciones para mejor rendimiento
-const ServicesSection = lazy(() => import("@/components/ServicesSection"));
-const AboutSection = lazy(() => import("@/components/AboutSection"));
-const EthicsSection = lazy(() => import("@/components/EthicsSection"));
 
 const SCROLL_THRESHOLD = 400;
 
 const Index = () => {
-  const [openModal, setOpenModal] = useState<string | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
   
   // Scroll animations para diferentes secciones
   const heroAnimation = useScrollAnimation({ threshold: 0.2 });
-  const cardsAnimation = useScrollAnimation({ threshold: 0.1 });
 
   // Función memoizada para el evento de scroll con throttling implícito
   const handleScroll = useCallback(() => {
@@ -36,37 +24,6 @@ const Index = () => {
   // Función memoizada para scroll to top
   const scrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-
-  // Función memoizada para abrir modales
-  const handleModalOpen = useCallback((sectionId: string) => {
-    setOpenModal(sectionId);
-  }, []);
-
-  // Función memoizada para renderizar contenido de modales con lazy loading
-  const renderModalContent = useCallback((sectionId: string) => {
-    switch (sectionId) {
-      case "servicios":
-        return (
-          <Suspense fallback={<ServicesSectionSkeleton />}>
-            <ServicesSection />
-          </Suspense>
-        );
-      case "nosotros":
-        return (
-          <Suspense fallback={<AboutSectionSkeleton />}>
-            <AboutSection />
-          </Suspense>
-        );
-      case "etica":
-        return (
-          <Suspense fallback={<EthicsSectionSkeleton />}>
-            <EthicsSection />
-          </Suspense>
-        );
-      default:
-        return null;
-    }
   }, []);
 
   // Efecto optimizado con cleanup
@@ -100,7 +57,7 @@ const Index = () => {
         Saltar al contenido principal
       </a>
       
-      <Header onNavigate={handleModalOpen} />
+      <Header />
 
       {/* Hero Section - Compact */}
       <section 

@@ -2,6 +2,8 @@
 /* ================================================== */
 
 /* Tailwind CSS Framework Directives */
+/* @tailwind directives are processed by PostCSS/Tailwind during build */
+/* These are not standard CSS rules but build-time transformations */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 
-interface HeaderProps {
-  onNavigate?: (sectionId: string) => void;
-}
-
-const Header = ({ onNavigate }: HeaderProps) => {
+const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,17 +18,13 @@ const Header = ({ onNavigate }: HeaderProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavigation = (sectionId: string) => {
-    if (onNavigate) {
-      onNavigate(sectionId);
-    }
-    setMobileMenuOpen(false); // Cerrar menú móvil al navegar
-  };
-
   const handleGetStarted = () => {
     const contactSection = document.getElementById('contacto');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // Si no está en la página principal, navegar al inicio
+      window.location.href = '/#contacto';
     }
     setMobileMenuOpen(false);
   };
@@ -38,6 +32,8 @@ const Header = ({ onNavigate }: HeaderProps) => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -51,30 +47,42 @@ const Header = ({ onNavigate }: HeaderProps) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => handleNavigation("servicios")}
-              className="text-foreground hover:text-primary transition-all duration-200 font-medium relative group"
+            <Link
+              to="/servicios"
+              className={`text-foreground hover:text-primary transition-all duration-200 font-medium relative group ${
+                isActive('/servicios') ? 'text-primary' : ''
+              }`}
               aria-label="Ver servicios"
             >
               Servicios
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button
-              onClick={() => handleNavigation("nosotros")}
-              className="text-foreground hover:text-primary transition-all duration-200 font-medium relative group"
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                isActive('/servicios') ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></span>
+            </Link>
+            <Link
+              to="/nosotros"
+              className={`text-foreground hover:text-primary transition-all duration-200 font-medium relative group ${
+                isActive('/nosotros') ? 'text-primary' : ''
+              }`}
               aria-label="Conocer sobre nosotros"
             >
               Nosotros
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button
-              onClick={() => handleNavigation("etica")}
-              className="text-foreground hover:text-primary transition-all duration-200 font-medium relative group"
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                isActive('/nosotros') ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></span>
+            </Link>
+            <Link
+              to="/etica"
+              className={`text-foreground hover:text-primary transition-all duration-200 font-medium relative group ${
+                isActive('/etica') ? 'text-primary' : ''
+              }`}
               aria-label="Ver principios éticos"
             >
               Ética
-              <span className="absolute -bottom-1 left-0 w-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </button>
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                isActive('/etica') ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></span>
+            </Link>
           </nav>
 
           {/* Desktop Actions */}
@@ -110,27 +118,36 @@ const Header = ({ onNavigate }: HeaderProps) => {
         {mobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 animate-in slide-in-from-top duration-200">
             <div className="flex flex-col space-y-4">
-              <button
-                onClick={() => handleNavigation("servicios")}
-                className="text-foreground hover:text-primary transition-colors text-left py-2 px-4 rounded-lg hover:bg-card/50"
+              <Link
+                to="/servicios"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-foreground hover:text-primary transition-colors text-left py-2 px-4 rounded-lg hover:bg-card/50 ${
+                  isActive('/servicios') ? 'bg-card/50 text-primary' : ''
+                }`}
                 aria-label="Ver servicios"
               >
                 Servicios
-              </button>
-              <button
-                onClick={() => handleNavigation("nosotros")}
-                className="text-foreground hover:text-primary transition-colors text-left py-2 px-4 rounded-lg hover:bg-card/50"
+              </Link>
+              <Link
+                to="/nosotros"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-foreground hover:text-primary transition-colors text-left py-2 px-4 rounded-lg hover:bg-card/50 ${
+                  isActive('/nosotros') ? 'bg-card/50 text-primary' : ''
+                }`}
                 aria-label="Conocer sobre nosotros"
               >
                 Nosotros
-              </button>
-              <button
-                onClick={() => handleNavigation("etica")}
-                className="text-foreground hover:text-primary transition-colors text-left py-2 px-4 rounded-lg hover:bg-card/50"
+              </Link>
+              <Link
+                to="/etica"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-foreground hover:text-primary transition-colors text-left py-2 px-4 rounded-lg hover:bg-card/50 ${
+                  isActive('/etica') ? 'bg-card/50 text-primary' : ''
+                }`}
                 aria-label="Ver principios éticos"
               >
                 Ética
-              </button>
+              </Link>
               <Button 
                 variant="default" 
                 className="w-full shadow-glow-primary"
