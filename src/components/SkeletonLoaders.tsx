@@ -3,14 +3,14 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 // Skeleton para tarjetas de servicios
 export const ServiceCardSkeleton = () => (
-  <Card className="border-border bg-card/50 backdrop-blur-sm">
+  <Card className="border-border bg-card/50 backdrop-blur-sm animate-pulse">
     <CardHeader className="text-center">
-      <Skeleton className="w-16 h-16 mx-auto mb-4 rounded-lg" />
-      <Skeleton className="h-6 w-3/4 mx-auto" />
+      <Skeleton className="w-16 h-16 mx-auto mb-4 rounded-lg animate-shimmer" />
+      <Skeleton className="h-6 w-3/4 mx-auto animate-shimmer" />
     </CardHeader>
     <CardContent>
-      <Skeleton className="h-4 w-full mb-2" />
-      <Skeleton className="h-4 w-5/6" />
+      <Skeleton className="h-4 w-full mb-2 animate-shimmer" />
+      <Skeleton className="h-4 w-5/6 animate-shimmer" />
     </CardContent>
   </Card>
 );
