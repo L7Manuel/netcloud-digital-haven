@@ -35,7 +35,9 @@ const NubecitaButton = ({ onClick, hasNewMessage = false }: NubecitaButtonProps)
 
       {/* Texto debajo del botón */}
       <div className="mt-2 text-center">
-        <p className="text-xs font-medium text-[#4682B4]">Nubecita</p>
+        <p className="text-xs font-bold bg-tech-gradient bg-clip-text text-transparent">
+          NUBECITA
+        </p>
       </div>
     </div>
   );
