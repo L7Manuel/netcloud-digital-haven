@@ -9,10 +9,10 @@
 
 ### Resumen del Proyecto
 
-**Nombre:** NetCloud Digital Haven  
+**Nombre:** NetCloud VLZA  
 **Tipo:** Sitio web corporativo React + TypeScript  
-**URL Producción:** https://l7manuel.github.io/netcloud-digital-haven/  
-**Repositorio:** https://github.com/L7Manuel/netcloud-digital-haven
+**URL Producción:** https://l7manuel.github.io/netcloud-vlza/  
+**Repositorio:** https://github.com/L7Manuel/netcloud-vlza
 
 ### Stack Tecnológico Actual
 - **Frontend:** React 18.3.1 + TypeScript 5.8.3 (strict mode)
@@ -65,7 +65,7 @@ npm run dev  # → http://localhost:8080
 npm run build
 
 # Preview del build
-npm run preview  # → http://localhost:4173/netcloud-digital-haven/
+npm run preview  # → http://localhost:4173/netcloud-vlza/
 
 # Verificar TypeScript
 npx tsc --noEmit
@@ -83,14 +83,14 @@ npm install
 - **Trigger:** Push a rama `main`
 - **Workflow:** `.github/workflows/deploy.yml`
 - **Tiempo:** 2-3 minutos
-- **Verificar:** https://github.com/L7Manuel/netcloud-digital-haven/actions
+- **Verificar:** https://github.com/L7Manuel/netcloud-vlza/actions
 - **Configuración:** Settings → Pages → Source: `GitHub Actions`
 - **Permisos:** Settings → Actions → Workflow permissions: `Read and write`
 
 ### Notas Importantes para la IA
 1. **Usuario trabaja en Windows con PowerShell** - Usar comandos Windows
 2. **Despliegue automático activo** - No necesita `npm run deploy` manual
-3. **Base path en producción:** `/netcloud-digital-haven/` (configurado en `vite.config.ts`)
+3. **Base path en producción:** `/netcloud-vlza/` (configurado en `vite.config.ts`)
 4. **Archivo `.nojekyll` es crítico** - Evita procesamiento de Jekyll en GitHub Pages
 5. **Última actualización:** 20 Oct 2025 - Consolidación de documentación
 
@@ -113,14 +113,23 @@ npm install
 
 ---
 
-#### ✅ 1. Code Splitting de Vendors (30 min)
+#### ✅ 1. Code Splitting de Vendors (30 min) - **COMPLETADO** ✅
 **Impacto:** -100-150 KB | **Prioridad:** 🔥 ALTA
 
-- [ ] **Paso 1:** Abrir `vite.config.ts`
-- [ ] **Paso 2:** Agregar configuración de `manualChunks` en `build.rollupOptions.output`
-- [ ] **Paso 3:** Ejecutar `npm run build` y verificar chunks generados
-- [ ] **Paso 4:** Ejecutar `npm run preview` y verificar que todo funciona
-- [ ] **Paso 5:** Commit: `git commit -m "perf: implement vendor code splitting"`
+- [x] **Paso 1:** Abrir `vite.config.ts`
+- [x] **Paso 2:** Agregar configuración de `manualChunks` en `build.rollupOptions.output`
+- [x] **Paso 3:** Ejecutar `npm run build` y verificar chunks generados
+- [x] **Paso 4:** Ejecutar `npm run preview` y verificar que todo funciona
+- [x] **Paso 5:** Commit: `git commit -m "perf: implement vendor code splitting"`
+
+**Resultados obtenidos (20 Oct 2025):**
+- ✅ **vendor-react.js:** 345.43 KB (107.69 KB gzip)
+- ✅ **vendor-ui.js:** 91.04 KB (31.99 KB gzip)
+- ✅ **vendor-query.js:** 28.44 KB (8.84 KB gzip)
+- ✅ **vendor-icons.js:** 14.00 KB (3.39 KB gzip)
+- ✅ **index.js:** 153.86 KB (35.75 KB gzip)
+- ✅ **Total JS:** 650.80 KB (191.05 KB gzip)
+- ✅ **Chunks generados correctamente** - Carga paralela optimizada
 
 **Código a agregar:**
 ```typescript
@@ -536,7 +545,7 @@ getTTFB(sendToAnalytics);
 ### Antes de Empezar
 ```bash
 # Lighthouse
-npx lighthouse https://l7manuel.github.io/netcloud-digital-haven/ --view
+npx lighthouse https://l7manuel.github.io/netcloud-vlza/ --view
 
 # Bundle analyzer
 npm run build
@@ -551,7 +560,7 @@ npm run build
 
 # Lighthouse CI
 npm install -g @lhci/cli
-lhci autorun --url=https://l7manuel.github.io/netcloud-digital-haven/
+lhci autorun --url=https://l7manuel.github.io/netcloud-vlza/
 ```
 
 ---
@@ -582,9 +591,9 @@ lhci autorun --url=https://l7manuel.github.io/netcloud-digital-haven/
 ## 📞 Recursos
 
 - **Documentación técnica:** `PROYECTO.md`
-- **Repositorio:** https://github.com/L7Manuel/netcloud-digital-haven
-- **Producción:** https://l7manuel.github.io/netcloud-digital-haven/
-- **Actions:** https://github.com/L7Manuel/netcloud-digital-haven/actions
+- **Repositorio:** https://github.com/L7Manuel/netcloud-vlza
+- **Producción:** https://l7manuel.github.io/netcloud-vlza/
+- **Actions:** https://github.com/L7Manuel/netcloud-vlza/actions
 
 ---
 

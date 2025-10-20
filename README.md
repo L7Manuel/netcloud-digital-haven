@@ -1,8 +1,8 @@
-# NetCloud - Digital Haven
+# NetCloud - VLZA
 
 > Sitio web corporativo para empresa de tecnología especializada en desarrollo web, automatizaciones IA y marketing digital.
 
-**🌐 Sitio en Producción:** https://l7manuel.github.io/netcloud-digital-haven/
+**🌐 Sitio en Producción:** https://l7manuel.github.io/netcloud-vlza/
 
 ---
 
@@ -16,8 +16,8 @@
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/L7Manuel/netcloud-digital-haven.git
-cd netcloud-digital-haven
+git clone https://github.com/L7Manuel/netcloud-vlza.git
+cd netcloud-vlza
 
 # Instalar dependencias
 npm install
@@ -77,7 +77,7 @@ El proyecto usa GitHub Actions para despliegue automático:
 1. Haz push a la rama `main`
 2. GitHub Actions despliega automáticamente
 3. Espera 2-3 minutos
-4. Verifica en: https://l7manuel.github.io/netcloud-digital-haven/
+4. Verifica en: https://l7manuel.github.io/netcloud-vlza/
 
 ### Configuración Inicial
 
@@ -203,7 +203,7 @@ Este proyecto está bajo la Licencia MIT.
 ## 📞 Contacto
 
 - **GitHub:** [@L7Manuel](https://github.com/L7Manuel)
-- **Sitio:** https://l7manuel.github.io/netcloud-digital-haven/
+- **Sitio:** https://l7manuel.github.io/netcloud-vlza/
 
 ---
 

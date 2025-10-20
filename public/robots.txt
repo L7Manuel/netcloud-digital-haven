@@ -1,9 +1,9 @@
-# Robots.txt para NETCLOUD Digital Haven
+# Robots.txt para NETCLOUD VLZA
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://l7manuel.github.io/netcloud-digital-haven/sitemap.xml
+Sitemap: https://l7manuel.github.io/netcloud-vlza/sitemap.xml
 
 # Crawl-delay para bots específicos
 User-agent: Googlebot
