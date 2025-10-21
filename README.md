@@ -246,15 +246,25 @@ VITE_NUBECITA_WEBHOOK_URL=https://your-n8n-instance.com/webhook/chat-lead-webhoo
 
 ### Configurar Nubecita con n8n
 
+**Guía completa de deployment:** 📚 [NUBECITA_DEPLOYMENT.md](./NUBECITA_DEPLOYMENT.md)
+
+**Quick Start:**
+
 1. **Importa el workflow** en n8n (JSON incluido en documentación)
 2. **Configura las credenciales:**
    - Google Gemini API
    - Google Drive OAuth2
    - Email SMTP
    - Google Sheets
-3. **Obtén la URL del webhook** del nodo inicial
-4. **Agrega la URL** a tu archivo `.env`
-5. **Descomenta el código** en `src/hooks/useNubecita.ts` (líneas 127-131)
+3. **Elige tu escenario de deployment:**
+   - 🏠 **Semi-Automático** (Gratis, PC encendida) - Ideal para testing
+   - 🌐 **VPS 24/7** ($5-10/mes) - Ideal para producción
+   - ☁️ **n8n.cloud** (Gratis/Pago) - Ideal para escalado
+4. **Obtén la URL del webhook** según tu escenario
+5. **Agrega la URL** a tu archivo `.env`
+6. **Descomenta el código** en `src/hooks/useNubecita.ts` (líneas 127-131)
+
+Ver guía detallada con instalación de ngrok, scripts y troubleshooting en [NUBECITA_DEPLOYMENT.md](./NUBECITA_DEPLOYMENT.md)
 
 ---
 
